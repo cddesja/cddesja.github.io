@@ -3,6 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cddesja.github.io/</loc>
+    <lastmod>2019-05-21T17:03:17-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/publication/perry2019/</loc>
+    <lastmod>2019-05-21T17:03:17-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/publication/</loc>
+    <lastmod>2019-05-21T17:03:17-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cddesja.github.io/authors/admin/</loc>
   </url>
   
@@ -17,21 +33,12 @@
   </url>
   
   <url>
-    <loc>https://cddesja.github.io/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cddesja.github.io/post/</loc>
   </url>
   
   <url>
     <loc>https://cddesja.github.io/publication_types/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/publication/</loc>
   </url>
   
   <url>

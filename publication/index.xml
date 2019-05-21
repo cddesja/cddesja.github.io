@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on Chris Desjardins</title>
+    <title>Publications on C. D. Desjardins</title>
     <link>https://cddesja.github.io/publication/</link>
-    <description>Recent content in Publications on Chris Desjardins</description>
+    <description>Recent content in Publications on C. D. Desjardins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 21 May 2019 17:03:17 -0500</lastBuildDate>
     
 	<atom:link href="https://cddesja.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Perry2019</title>
+      <link>https://cddesja.github.io/publication/perry2019/</link>
+      <pubDate>Tue, 21 May 2019 17:03:17 -0500</pubDate>
+      
+      <guid>https://cddesja.github.io/publication/perry2019/</guid>
+      <description>abstract = &amp;ldquo;In the current study, we compared emotion regulation abilities between post‐institu‐tionalized (PI; N = 124) and never‐institutionalized non‐adopted (NA; N = 172) chil‐dren and adolescents (7–15 years). We assessed cortisol reactivity and coded emotion regulation during the speech portion of Trier Social Stress Test (TSST‐M). Parents reported on their children&amp;rsquo;s social, academic, and behavioral adjustment. Results suggest that emotion regulation abilities increased with age, but this increase was greater for NA than PI youth.</description>
+    </item>
     
   </channel>
 </rss>

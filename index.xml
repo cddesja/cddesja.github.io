@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Chris Desjardins</title>
+    <title>C. D. Desjardins</title>
     <link>https://cddesja.github.io/</link>
-    <description>Recent content on Chris Desjardins</description>
+    <description>Recent content on C. D. Desjardins</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 21 May 2019 17:03:17 -0500</lastBuildDate>
     
 	    <atom:link href="https://cddesja.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Perry2019</title>
+      <link>https://cddesja.github.io/publication/perry2019/</link>
+      <pubDate>Tue, 21 May 2019 17:03:17 -0500</pubDate>
+      
+      <guid>https://cddesja.github.io/publication/perry2019/</guid>
+      <description>&lt;p&gt;abstract = &amp;ldquo;In the current study, we compared emotion regulation abilities between post‐institu‐tionalized  (PI; N = 124) and   never‐institutionalized non‐adopted (NA; N = 172)  chil‐dren and adolescents (7–15 years). We assessed cortisol reactivity and coded emotion regulation  during  the  speech  portion  of  Trier  Social  Stress  Test  (TSST‐M).  Parents  reported on their children&amp;rsquo;s social, academic, and behavioral adjustment. Results suggest that emotion regulation abilities increased with age, but this increase was greater for   NA   than    PI  youth. With regard to  cortisol, piecewise growth modeling revealed that at higher levels of emotion regulation PI youth had greater baseline values (after a period of time allowing for acclimation to the laboratory) and had steeper recovery slopes than NA  youth. There was also   a  main   effect of  emotion regulation on  the  re‐activity slope suggesting that for both groups, as emotion regulation increased, the cortisol  reactivity  slope  decreased.  Finally, greater  emotion  regulation  predicted  fewer internalizing behavior problems for PI youth but not for NA youth.&amp;rdquo;
+authors = [&amp;ldquo;Nicole B. Perry&amp;rdquo;, &amp;ldquo;Bonny Donzella&amp;rdquo;, &amp;ldquo;Anna M. Parenteau&amp;rdquo;, &amp;ldquo;Christopher Desjardins&amp;rdquo;, &amp;ldquo;Megan R. Gunnar&amp;rdquo;]
+date = &amp;ldquo;2019&amp;rdquo;
+image = &amp;ldquo;&amp;rdquo;
+image_preview = &amp;ldquo;&amp;rdquo;
+math = false
+publication = &amp;ldquo;Developmental Psychobiology&amp;rdquo;
+title = &amp;ldquo;Emotion regulation and cortisol reactivity during a social evaluative stressor: A study of post‐institutionalized youth&amp;rdquo;
+url_code = &amp;ldquo;&amp;rdquo;
+url_dataset = &amp;ldquo;&amp;rdquo;
+url_pdf = &amp;ldquo;pdf/my-paper-name.pdf&amp;rdquo;
+url_project = &amp;ldquo;&amp;rdquo;
+url_slides = &amp;ldquo;&amp;rdquo;
+url_video = &amp;ldquo;&amp;rdquo;
++++&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
