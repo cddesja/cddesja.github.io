@@ -102,6 +102,16 @@
   </url>
   
   <url>
+    <loc>https://cddesja.github.io/classes/e411prma-spring2015/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/classes/stat-consulting/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cddesja.github.io/classes/</loc>
     <lastmod>2019-05-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -461,16 +471,6 @@
   
   <url>
     <loc>https://cddesja.github.io/authors/admin/</loc>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/classes/e411prma-spring2015/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/classes/stat-consulting/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
