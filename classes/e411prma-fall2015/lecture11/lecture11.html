@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>E-411 PRMA Lecture 11</title>
+
+		<meta name="description" content="Psychological Testing">
+		<meta name="author" content="Christopher David Desjardins">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>E-411 PRMA</h1>
+					<h3>Lecture 11 - Item Response Theory &amp Generalizability Theory</h3>
+					<p>
+						<small><a href="http://cddesja.github.io">Christopher David Desjardins</a></small>
+					</p>
+				</section>
+
+				<section>
+				<h2>Properties of IRT</h2>
+					<ol>
+						<li class = "fragment">Manifest variables differentiate among persons at different locations on the latent scale</li>
+						<li class = "fragment">Items are characterized by location and ability to discriminate among persons</li>
+						<li class = "fragment">Items and persons are on the same scale</li>
+						<li class = "fragment">Parameters estimated in a sample are linearly transformable to estimates of those parameters from another sample</li>
+						<li class = "fragment">Yields scores that are independent of number of items, item difficulty, and the individuals it is measured on, and are placed on a real-number scale</li>
+					</ol>
+				</section>
+
+				<section>
+				<h2>Assumptions of IRT</h2>
+					<center><img src="images/math_ability.png" height = "180"></center>
+					<p class="fragment"><font color="#ff2c2d">Response of a person to an item can be modeled with the a specific item reponse function</font></p>
+				</section>
+
+
+				<section>
+				<h2>IRT conceptually</h2>
+					<center><img src="images/irt_graph.png" height = "400"></center>
+				</section>
+
+				<section>
+				<h2>Item Response Function (IRF)</h2>
+					<center><img src="images/item3.png" height = "500"></center>
+				</section>
+
+
+				<section>
+				<a href="https://lundinn.shinyapps.io/rasch">https://lundinn.shinyapps.io/rasch</a>
+				<object data=https://lundinn.shinyapps.io/rasch width="1100" height="600"> <embed src=https://lundinn.shinyapps.io/rasch width="800" height="400"> </embed> Error: Embedded data could not be displayed. </object>
+				</section>
+
+				<section>
+					<h2>Getting item correct recap</h2>
+					<p>For the 1-PL and the Rasch, the probability of getting an item correct is a function of the distance an item is located from a person.</p>
+					<p> For the 2-PL, this is also a function of how well the item differentiates among people at different locations.</p>
+					<p> For the 3-PL, include item difficulty, item discrimination, and guessing</p>
+				</section>
+
+				<section>
+				<h2>Guessing Parameter</h2>
+				<center><img src="images/guess.png"></center>
+				</section>
+
+				<section>
+				<h2>Standard Error of Estimate and Information</h2>
+					<ul>
+						<li><p class = "fragment">Similar to the SEM, the <font color="#ff2c2d">standard error of estimate (SEE)</font> allows us to quantify uncertainty about score of a person within IRT </p></li>
+						<li><p class = "fragment"><font color="#ff2c2d">Information</font> is the inverse of the SEE and tells us how precise our estimates</p></li>
+						<li><p class = "fragment">We can use this to select items and develop tests!</p></li>
+						<li><p class = "fragment">See can also create 95% confidence intervals with this information</p></li>
+					</ul>
+				</section>
+
+				
+				<section>
+				<h2>Item Information Function</h2>
+				<center><img src="images/iif.png" height = "500"></center>
+				</section>
+
+				<section>
+				<a href="http://130.208.71.121:3838/rasch_information/">http://130.208.71.121:3838/rasch_information/</a>
+				<object data=http://130.208.71.121:3838/rasch_information/ width="1100" height="600"> <embed src=http://130.208.71.121:3838/rasch_information/ width="800" height="400"> </embed> Error: Embedded data could not be displayed. </object>
+				</section>
+
+				<section>
+				<a href="http://130.208.71.121:3838/twopl_information/">http://130.208.71.121:3838/twopl_information/</a>
+				<object data=http://130.208.71.121:3838/twopl_information/ width="1100" height="600"> <embed src=http://130.208.71.121:3838/twopl_information/ width="800" height="400"> </embed> Error: Embedded data could not be displayed. </object>
+				</section>
+
+				<section>
+				<a href="http://130.208.71.121:3838/threepl_information/">http://130.208.71.121:3838/threepl_information/</a>
+				<object data=http://130.208.71.121:3838/threepl_information/ width="1100" height="600"> <embed src=http://130.208.71.121:3838/threepl_information/ width="800" height="400"> </embed> Error: Embedded data could not be displayed. </object>
+				</section>
+
+				<section>
+				<h2>Test Information Function</h2>
+				<center><img src="images/tif.png" height = "500"></center>
+				</section>
+
+				<section data-background = #ff2c2d>
+				<h2>Generalizability theory</h2>
+				</section>
+
+<!-- 				<section>
+				<h2>Background of G-theory</h2>
+					<ul>
+					<li class="fragment">Instead of a true score, there exists a <font color = "#1b91ff">universe score</font> </li>
+					<li class="fragment">A true score may vary from test to test as a function of the testing setting</li>
+					<li class="fragment">The details of the particular test environment is known as the <font color ="#ff2c2d">universe</font></li>
+					<li class="fragment">The universe is then defined in terms of various <font color="#1b91ff	">facets</font>. These could be ... </li>
+						<ul class="fragment">
+							<li>Items</li>
+							<li>Persons</li>
+							<li>Ratings</li>
+						</ul>
+					<li class="fragment"><strong>Given the exact same conditions of the facets in the unverse, the exact same score should be obtained</strong></li>
+				</section>
+ -->
+					<section >
+				<h2>Generalizability Theory</h2>
+					<p class = "fragment current-visible" style = "font-size:32px">Reliability is essentially a measure of consistency in your scores (think of a dart board)</p>
+					<p class = "fragment current-visible" style = "font-size:32px">Error doesn't necessarily mean mistake, it can just refer to the measurement procedure/conditions</p>
+					<p class = "fragment" style = "font-size:32px"><font color = "#ff2c2d" style = "font-size:32px">Generalizability theory</font>, the child of CTT and ANOVA, allows a researcher to <font color = "#1b91ff">quantify</font> and <font color = "#1b91ff">distangle</font> the <font color = "#1b91ff">different sources of error</font> in observed scores</p>
+					<p class="fragment" style = "font-size:32px"><font color = "#1b91ff">What are we trying to generalize over</font></p>
+					<p class = "fragment current-visible" style = "font-size:32px">The CTT model is: \(X = T + E\) </p>
+					<p class = "fragment" style = "font-size:32px">The G-Theory model is: \(X = \mu_p + E_1 + E_2 + \dots + E_H\) </p>
+					<p class = "fragment" style = "font-size:32px">\(\mu_p\)  - universe score and \(E_h\)  - are sources of error</p>
+				</section>
+
+				<section>
+				<h2>G studies</h2>
+				<ul>
+					<li class="fragment">Suppose we develop a test to measure your writing abilities</li>
+					<li class="fragment">We could have various ... </li>
+						<ul class="fragment">
+							<li>Items</li>
+							<li>Raters</li>
+						</ul>
+					<li class="fragment">These are referred to collectively as <font color = "#1b91ff">facets</font></li>
+					<li class="fragment current-visible"><font color = "#ff2c2d">Facets</font> - Conditions of measurement</li>
+					<li class="fragment fragment current-visible">If we administered the test on multiple occasions, occasions could also be a facet</li>
+					<li class="fragment">Let each rater rate each item and assume there are an <strong>essentially limitless pool of items and raters</strong> could draw from - <font color = "#1b91ff">universe of admissible observations</font>	</li>
+				</ul>
+				</section>
+
+				<section>
+					<h2>Fixed Design</h2>
+					<center><img src="images/fixed_design.png"></center>
+				</section>
+
+
+				<section>
+					<h2>Random Design</h2>
+					<center><img src="images/random_design.png"></center>
+				</section>
+
+				<section>
+					<h2>Nested Design</h2>
+					<center><img src="images/nested_design.png"></center>
+				</section>
+
+				<section>
+					<h2>More terminology</h2>
+					<ul>
+						<li><font color = "#ff2c2d">universe</font> - conditions of the measurement</li>
+						<li><font color = "#ff2c2d">population</font> - objects of measurement</li>
+							<ul>
+								<li>This is our typical notion of a population</li>
+							</ul>
+						<li><font color="#ff2c2d">G-study</font> - Set up study design and estimate the variances</li>
+						<li><font color="#ff2c2d">Universe of generalizations</font> - What are we trying to generalize to? Just these items and raters? Or are these items and raters a sample from all items and raters?</li>
+						
+					</ul>
+				</section>
+
+
+				<section>
+				<h2>Our model</h2>
+				<p class = "fragment" style = "font-size:32px"> Recall, each rater rates each item</p>
+				<p class = "fragment" style = "font-size:32px">\(X_{pir} = \mu + v_p + v_i + v_r + v_{pi} + v_{pr} + v_{ir} + v_{pir}\)</p>
+
+				<p class = "fragment" style = "font-size:32px">If we assume that that these effects are uncorrelated then</p>
+
+				<p class = "fragment" style = "font-size:32px">\(\sigma^2(X_{pir}) = \sigma^2_p + \sigma^2_i + \sigma^2_r + \sigma^2_{pi} + \sigma^2_{pr} + \sigma^2_{ir} + \sigma^2_{pir}\)</p>
+
+				<p class = "fragment" style = "font-size:32px">These are our <font color = "#1b91ff">variance components</font></p>
+
+				<p class = "fragment" style = "font-size:32px">In a <font color = "#1b91ff">G study</font>, we estimate each of these variance components</p>
+
+				<p class = "fragment" style = "font-size:32px">They can be estimated using <code>aov()</code> or <code>lme4::lmer()</code> functions in <code>R</code></p>
+
+				<p class = "fragment" style = "font-size:32px">This forms the basis of our <font color = "#1b91ff">D study</font>, which is used to investigate different scenarios and allow us to calculate different reliability estimates based on our use</p>
+				</section>
+
+				<section>
+					<h2>D study</h2>
+					<ul>
+						<li>We need to decide if our facets should be considered <font color ="#ff2c2d">fixed</font> or <font color="#ff2c2d"> random</font></li>
+						<li>We need to know if they are <font color ="#ff2c2d">nested within one another</font></li>
+						<li> This will determine our <font color ="#ff2c2d">universe of generalization</font> and has implications for our reliability estimates!</li>	
+					</ul>
+				</section>
+
+				<section>
+					<h2>What does the D study give us?</h2>
+					<ul>
+						<li >It tells us what effect changing the number of ... </li>
+							<ul class = "fragment">
+								<li>Items</li>
+								<li>Raters</li>
+								<li>Testing Occasions</li>
+								<li>Whatever</li>
+							</ul>
+						<li class = "fragment">... affects reliability</li>	
+					</ul>
+				</section>
+
+				<section>
+					<h2>Consider Raters and Items crossed (p x R x I design)</h2>
+					<p> We need to derive universe score, relative error, and absolute error variances</p>
+					<p class = "fragment" style = "font-size:32px">\(\sigma^2(X_{pir}) = \sigma^2_p + \sigma^2_i + \sigma^2_r + \sigma^2_{pi} + \sigma^2_{pr} + \sigma^2_{ir} + \sigma^2_{pir}\)</p>
+
+					
+				</section>
+
+				<section>
+				<h3>The variances based on our design</h3>
+					<p><font color = "#1b91ff">universe-score variance</font> $$\sigma_{\tau}^2 = \sigma_p^2$$</p>
+					<p><font color = "#1b91ff">relative error variance</font>$$\sigma_{\delta}^2 = \frac{\sigma_{pi}^2}{n_i^`} + \frac{\sigma_{pr}^2}{n_r^`} + \frac{\sigma_{pir}^2}{n_i^`n_r^`} $$</p>
+					<p><font color = "#1b91ff">absolute error variance</font>$$\sigma_{\Delta}^2 = \frac{\sigma_{i}^2}{n_i^`} + \frac{\sigma_{r}^2}{n_r^`} + \frac{\sigma_{ir}^2}{n_i^`n_r^`} +  \frac{\sigma_{pr}^2}{n_r^`} + \frac{\sigma_{pi}^2}{n_i^`} + \frac{\sigma_{pir}^2}{n_i^`n_r^`} $$</p>
+					<p class="fragment" > <font color = "#ff2c2d">IMPORTANT</font>: What we consider fixed or random determines what goes where!</p>
+				</section>
+
+				<section>
+				<h2>D study estimates</h2>
+				<p style = "font-size:32px">Now that we've partititioned our variance into 3 components: <font color = "#ff2c2d">universe score</font>, <font color = "#ff2c2d">relative error</font>, and <font color = "#ff2c2d">absolute error</font> variance.</p>
+				<p style = "font-size:32px"><font color = "#ff2c2d">Relative error</font> and the <font color = "#ff2c2d">generalizability coefficient</font>, are analagous to \(\sigma^2_E\) and reliability in CTT, and is based on <font color = "#1b91ff">comparing examinees</font></p>
+				<p style = "font-size:32px">\(E\rho^2 = \frac{\sigma^2_\tau}{\sigma^2_\tau + \sigma^2_\delta}\)</p>
+				<p style = "font-size:32px">Absolute error variance is for making <font color = "#1b91ff">absolute decisions</font> about examinees</p>
+				<p style = "font-size:32px">Dependability coefficient, \(\phi = \frac{\sigma^2_\tau}{\sigma^2_\tau + \sigma^2_\Delta}\)</p>
+				</section>
+
+				<section>
+					<h2>Icelandic writing test</h2>
+					<p>Again, consider our G-study in which Icelanders answer items on a writing test that were scored by multiple raters.	 </p>
+
+				<table class ="fragment" style = "font-size:18px">
+					<tr><td>Source</td><td>Variance component</td><td>Estimate</td><td>Total variability (%)</td></tr>
+					<tr><td>Person (p)</td><td> $$\sigma_p^2$$</td> <td>1.376 </td><td>32</td></tr>
+					<tr><td>Item (i)</td><td>$$\sigma_i^2$$</td><td> 0.215</td> <td>05</td></tr>
+					<tr><td>Rater (r)</td><td>$$\sigma_r^2$$</td><td>0.043</td><td>01</td></tr>
+					<tr><td>p × i</td><td>$$\sigma_{pi}^2$$</td><td>0.860</td><td>20</td></tr>
+					<tr><td>p × r</td><td>$$\sigma_{pr}^2$$<td>0.258</td><td>06</td></tr>
+					<tr><td>i × r</td><td>$$\sigma_{ir}^2$$<td>0.001</td><td>00</td></tr>
+					<tr><td>p × r × i</td><td>$$\sigma_{pir}^2$$</td><td>1.548</td><td>36</td></tr>
+					<tr></tr>
+				</table>
+				</section>
+
+					<section>
+				<h3>What do those numbers actually mean?</h3>
+					 <ul style = "font-size:28px">
+					 	<li class="fragment">The <font color ="#ff2c2d">large person variation (32%)</font> means there was a lot of between person variability even after accounting for items and raters</li>
+					 		<ul>
+					 		<li  class="fragment" >This is our universe score variance in our example</li>
+					 		</ul>
+					 	<li  class="fragment"><font color ="#ff2c2d">5% of the variation was associated with items</font> (i.e. items were of varied difficulty)</li>
+					 	<li  class="fragment"><font color ="#ff2c2d">Only 1% of the variation was associated with raters</font></li>
+					 	<li  class="fragment"><font color ="#ff2c2d">20% of the variation for p x i </font>- means that person relative standings differed by items</li>
+					 	<li  class="fragment"><font color ="#ff2c2d">6% of the variation for p x r </font>- means that person relative standing differed somewhat by raters </li>
+					 	<li  class="fragment"><font color ="#ff2c2d">0% of the variation for i x r </font>- means the ordering of the item's difficulty did not change by raters</li>
+					 	<li  class="fragment"><font color ="#ff2c2d">36% of the variation for p x i x r </font>- means relative standing varied by item and rater and other sources of error not controlled for in the study </li>
+					 </ul>
+				</section>	
+
+			
+				<section data-background="#1b91ff">
+					<h3>Do you think changing the numbers of items or the number of occasions would have the biggest affect on reliability?</h3>
+				</section>
+
+				<section>
+					<h3>D-study 1 - 20 items and 3 raters</h3>
+								<p style = "font-size:20px"> $$\sigma_{\delta}^2 = \frac{\sigma_{pi}^2}{n_i^`} + \frac{\sigma_{pr}^2}{n_r^`} + \frac{\sigma_{pir}^2}{n_i^`n_r^`} = \frac{0.86}{20} + \frac{0.258}{3} + \frac{1.548}{3*20} = 0.1548$$</p>
+								<p style = "font-size:20px">$$\sigma_{\Delta}^2 = \frac{\sigma_{i}^2}{n_i^`} + \frac{\sigma_{r}^2}{n_r^`} + \frac{\sigma_{ir}^2}{n_i^`n_r^`} +  \frac{\sigma_{pi}^2}{n_i^`} + \frac{\sigma_{pr}^2}{n_r^`} + \frac{\sigma_{pir}^2}{n_i^`n_r^`}  = \frac{0.215}{20} + \frac{0.043}{3} + \frac{.001}{3*20} + \frac{0.86}{20} + \frac{0.258}{3} + \frac{1.548}{3*20} = 0.1799$$</p>
+								<p style = "font-size:20px">\(E\rho^2 = \frac{\sigma^2_\tau}{\sigma^2_\tau + \sigma^2_\delta} = \frac{1.376}{1.376 + 0.1548} = 0.899\) </p>
+								<p style = "font-size:20px">\(\phi = \frac{\sigma^2_\tau}{\sigma^2_\tau + \sigma^2_\Delta} = \frac{1.376}{1.376 + 0.1799} = 0.884\)</p>
+								<p class = "fragment" style = "font-size:20px"><font color = "#1b91ff">What if we used just 10 items and 2 raters?</font></p>
+								<p class = "fragment" style = "font-size:20px">\(E\rho^2 = 0.824\) and \(\phi = 0.803\)</p>
+								<p class = "fragment" style = "font-size:20px">So reliabilities decrease!</p>
+				</section>
+
+				<section>
+				<h2>Comparing G-Theory to CTT</h2>
+				<ul style = "font-size:32px">
+					<li class = "fragment">CTT reliability estimates are often incorrect</li>
+					<li class = "fragment">When we have more than 1 random facet, CTT reliabilities are too high</li>
+					<li class = "fragment">Different D-study scenarios allow you to investigate what-ifs based on number of items, raters, occasions, test forms, etc</li>
+					<li class = "fragment">Some take homes from CTT</li>
+						<ul  class = "fragment">
+							<li><font color = "#ff2c2d">Universe score variance gets smaller if we consider a facet fixed</font> instead of random bc we reduce our universe of generalization!</li>
+							<li><font color = "#ff2c2d"Larger D study sample sizes</font> lead to <font color = "#ff2c2d">smaller error variances</font></li>
+							<li><font color = "#ff2c2d">Nested D study designs</font> usually lead to <font color = "#ff2c2d">small error variances and larger reliability coefficients</font></li>
+						</ul>
+				</ul>
+				</section>
+		</div>
+		</div>
+
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false ,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+					//{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

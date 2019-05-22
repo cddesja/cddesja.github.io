@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>E-411 PRMA Lecture 13</title>
+
+		<meta name="description" content="Psychological Testing">
+		<meta name="author" content="Christopher David Desjardins">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>E-411 PRMA</h1>
+					<h3>Lecture 13 - Equating</h3>
+					<p>
+						<small><a href="http://cddesja.github.io">Christopher David Desjardins</a></small>
+					</p>
+				</section>
+
+
+				
+
+					<section >
+				<h2>Motivation</h2>
+					<p class = "fragment"> Consider the salary of a teacher at a school now and in 1950</p>
+					<p class = "fragment"> <font color = "#1b91ff">Is it fair to compare their salaries?</font></p>
+					<p class = "fragment"> There salaries will most certainly not be the same </p>
+					<p class = "fragment"> The krona has changed a lot, right? </p>
+					<p class = "fragment"> <font color = "#1b91ff">How can we most fairly compare these salaries?</font></p>
+					<p class = "fragment"> One possibility would be to compare the salaries against a set up comparable goods (e.g. price of milk, liter of gas, price of a stamp, etc)</p>
+				</section>
+
+				<section data-background="#1b91ff">
+					<h2>How should we compare test scores on different forms of a test?</h2>
+				</section>
+
+				<section>
+				<h2>Equating in testing</h2>
+				<ul>
+					<li class="fragment">We often have multiple forms of a test</li>
+						<ul class = "fragment">
+						<li> Parallel or alternate form</li>
+						</ul>
+					<li class = "fragment"> <font color = "#1b91ff">How might we compare these forms?</font></li>
+						<ul>
+							<li class = "fragment"> Sum up number correct</li>							
+							<li class = "fragment"> Calculate percent correct</li>
+							<li class = "fragment"><font color = "#ff2c2d">Raw Scores</font></li>		
+						</ul>
+					<li class="fragment"><strong>Problem:</strong> These tests are composed of different questions with differences in item difficulties</li>
+					<li class = "fragment"> <font color = "#1b91ff">Why is this a problem?</font></li>
+				</section>
+
+				<section>
+				<h2>Scaled Scores</h2>
+				<p class="fragment">Tests need to be comparable across forms</p>
+				<p class="fragment">We need to <font color = "#ff2c2d">scale</font> our scores to adjust for different difficulty</p>
+				<p class="fragment">For each possible raw score, we will come up with a <font color = "#ff2c2d">scaled score</font> based on the difficulty of the questions</p>
+				<p class="fragment"><strong>Review:</strong> What measurement framework do you think we are using?</p>
+				</section>
+
+				<!-- <section>
+				<h3>Relationship with IRT</h3>
+				<p class="fragment">IRT creates scores that are independent of the test and the other test takers</p>
+				<p class="fragment">Creating comparable scores isn't really an issue </p>
+				<p class="fragment">But we make much, much stronger assumptions</p>
+				</section> -->
+
+				<section>
+					<table style = "font-size:28px">
+					<thead><tr><td></td><td colspan="3" style="text-align:center">Scaled Scores</td></thead>
+					<tbody>
+					<tr><td>Raw Score</td><td>Form A</td><td>Form B </td><td>Form C</td></tr>
+					<tr><td>50</td><td>130</td> <td>130 </td><td>130</td></tr>
+					<tr><td>49</td><td> 130</td> <td>130 </td><td>128</td></tr>
+					<tr><td>48</td><td> 129</td> <td>130 </td><td>126</td></tr>
+					<tr><td>47</td><td> 127</td> <td> 130 </td><td>124</td></tr>
+					<tr><td>46</td><td> 126</td> <td>130 </td><td>122</td></tr>
+					<tr><td>45</td><td> 124</td> <td>129 </td><td>120</td></tr>
+					<tr><td>44</td><td> 121</td> <td>128 </td><td>118</td></tr>
+					<tr><td>43</td><td> 119</td> <td>127 </td><td>115</td></tr>
+					<tr><td>42</td><td> 118</td> <td>126 </td><td>114</td></tr>
+					<tr><td>41</td><td> 117</td> <td>125 </td><td>113</td></tr>
+					<tr><td>40</td><td> 116</td> <td>124 </td><td>110</td></tr>
+					<tr></tr>
+					</tbody>
+				</table>
+				</section>
+
+				<section>
+					<h2>Equating Process</h2>
+					<ul style = "font-size:32px">
+						<li class="fragment">The first form that is used to derive scale scores is the <font color = "#ff2c2d">base form</font></li>
+						<li class="fragment">After the raw-to-scale conversion has occurred this form is <font color = "#ff2c2d">on scale</font></li>
+						<li class="fragment">We then <font color = "#ff2c2d">equate</font> a new form to a form that is already on scale</li>
+						<li class="fragment">The form already on scale is our <font color = "#ff2c2d">reference form</font> and the form that is not yet equated is our <font color = "#ff2c2d">new form</font></li>
+						<li class="fragment">Once our new form is on scale, we can calculate raw scores for the new test takers for the reference form and use the reference form to derive scaled scores</li>
+						<li  class="fragment"><strong>An issue</strong> -  Can derive reference scores that weren't possible because of discreteness</li>
+					</ul>
+				</section>
+
+				<section>
+					<table style = "font-size:28px">
+					<thead><tr><td colspan = "2"><strong>New Form Raw-to-Raw</strong></td><td colspan="2"><strong>Reference Form Raw-to-Scale</strong></td></thead>
+					<tbody>
+					<tr><td>New</td><td>Reference</td><td>Reference </td><td>Scaled</td></tr>
+					<tr><td>...</td><td>...</td> <td>... </td><td>...</td></tr>
+					<tr><td>39</td><td> 43.25</td> <td>44 </td><td>109.765</td></tr>
+					<tr><td>38</td><td> 42.80</td> <td>43 </td><td>107.643</td></tr>
+					<tr><td>37</td><td> 41.75</td> <td>42 </td><td>106.902</td></tr>
+					<tr><td>36</td><td> 41 </td> <td>41 </td><td>103.853</td></tr>
+					<tr></tr>
+					</tbody>
+				</table>
+
+				<p class="fragment"><font color = "#1b91ff">What should someone with a 38 on the new form get for a scaled score?</font></p>
+				</section>
+
+
+				<section>
+					<h3>Test takers with a 38 on the new form</h3>
+					<p class = "fragment">38's reference test score was 42.80</p>
+					<p class = "fragment">This is 80% of the way between 42 and 43</p>
+
+					<pre class="fragment"><code>
+# 80% of the way between 42 and 43
+(107.643 - 106.902) * .80
+[1] 0.5928
+
+# Add this to the score for 42
+106.902 + 0.5928
+[1] 107.4948
+ 					</code></pre>
+ 					<p class="fragment"><font color = "#1b91ff">They should get a 107.4948</font></p>
+				</section>
+
+				<section>
+					<h3>Scale Decisions in equating</h3>
+					<ul>
+						<li class="fragment">Choosing the <font color = "#1b91ff">range</font> of scale scores </li>	
+							<ul>
+						<li class="fragment">Don't want scale to look like total or percent correct</li>
+						</ul>
+						<li class="fragment">How fine should our scale be?</li>
+							<ul class="fragment">
+								<li>Usually, want each raw score to correspond to a unique scaled score</li>
+								<li>Need to be careful to not exaggerate precision</li>
+							</ul>
+						<li class="fragment">Often truncate the scaled scores at the end</li>
+							<ul>
+								<li class="fragment">Allows test takers on an easier form than the reference form to get the highest possible scaled score</li>
+								<li class="fragment">Truncate at lower end to avoid meaningless distinctions if scores are below chance alone</li>
+
+							</ul>
+					</ul>
+				</section>
+
+				
+				</section>
+
+				<section>
+					<h3>How to create the raw-to-scale conversion</h3>
+						<p class = "fragment">Decide on the mean and standard deviation of a group of test takers</p>
+						<p class = "fragment">Choose two raw scores, specify their scaled scores, then linearly interpolate the other scores</p>
+				</section>
+
+
+				<section>
+					<h3>General limitations of equating</h3>
+						<p class = "fragment">A test taker may know more answers on one form of a test</p>
+						<p class  = "fragment"><strong>Equating is unable to adjust scores correctly for every test taker!</strong></p>
+						<p class = "fragment">We strive to be approximately correct for our target population</p>
+						<p class = "fragment">Two groups could differ based on emphasized material (e.g. a teacher effect)</p>
+						<p class = "fragment">Equating results in discrete scores (well, we report them that way)</p>
+				</section>
+
+				<section>
+					<h3>Symmetry of Equating</h3>
+					<p class = "fragment"> A score of 20 on test form A corresponds to a score of 25 on test form B</p>
+					<p class = "fragment"> A score of 25 on test form B corresponds to a score of 20 on test form A</p>
+					<p class = "fragment">This is known as <font color = "#ff2c2d">symmetry</font></p>
+					<p class = "fragment">Statistical prediction isn't like this!</p>
+				</section>
+
+				<section>
+				<h3>Cars again</h3>
+										<pre><code>
+mod1 <- lm(speed ~ dist, cars)
+mod2 <- lm(dist ~ speed, cars)
+predict(mod1, newdata = list(dist = 100))
+       1 
+24.84066 
+predict(mod2, newdata = list(speed = 24.84066))
+       1 
+80.10453 
+ 					</code></pre>					
+				</section>
+
+					<section>
+					<h3>Equating Designs</h3>
+					<ul style="font-size:32px">
+						<li class = "fragment">To make scores comparable you need something similar across the forms</li>
+						<li class = "fragment">This could involve ... </li>
+							<ul>
+								<li class = "fragment">Same group</li>
+									<ul>
+										<li class="fragment">Differences in score distributions are a function of form difficulty</li>
+									</ul>
+								<li class = "fragment">Equivalent groups</li>
+									<ul>
+										<li class = "fragment">Two random samples from the same population</li>
+										<li class = "fragment">Group ability, again, assumed constant and differences in score distributions are a function of form difficulty</li>
+										
+									</ul>
+								<li class = "fragment"><font color = "#ff2c2d">Nonequivalent group</font></li>
+									<ul>
+										<li class = "fragment"><font color = "#ff2c2d">Two random samples from two populations</font></li>
+										<li class = "fragment"><font color = "#ff2c2d">Common anchor items is necessary</font></li>
+										<li class = "fragment"><font color = "#ff2c2d">Equating methods more complex</font></li>
+										
+									</ul>
+							</ul>	
+					</ul>
+				</section>
+
+				<section>
+				<h3>Our first def'n of Equating</h3>
+				<blockquote>&ldquo;A score on the new form and a score on the reference form are equivalent in a group of test takers if they represent the same relative position in the group.&rdquo;</blockquote>
+				<!-- <p class = "fragment">An equating method is used to specify this relationship</p> -->
+				</section>
+
+				<section>
+					<h3>Mean Equating</h3>
+					<p class = "fragment">The simplest form of equating involves adjusting the scores by the difference in means between the reference and new forms</p>
+					<p class = "fragment">Substraction of values if the new form is easier</p>
+					<p class = "fragment">Addition of values if the new form is harder</p>
+				</section>
+
+				<section>
+					<h3>Example</h3>
+					<p >Suppose the target population's mean on the reference form was 80 and their mean on the new form was 85.</p>
+					<ol class = "fragment">
+						<li>Which form was harder?</li>
+						<li>What should should someone with a 90 on the new form get on the reference form if we were using mean equating?</li> 
+					</ol>
+				</section>
+
+				<section>
+					<h4>Problem with mean equating (Livingston, 2014)</h4>
+					<img src = "images/mean_problem.png" />
+				</section>
+
+				<section>
+					<h3>Linear equating</h3>
+					<p class = "fragment">We need to adjust based on how high or low a test taker's score is from the mean</p>
+					<p class = "fragment"><font color = "#1b91ff">What might we consider doing?</font></p>
+				</section>
+
+				<section>
+					<h3>Equating better def'n</h3>
+					<blockquote>&ldquo;
+A score on the new form and a score on the reference form are equivalent in a group of test takers if they are the same number of standard deviations above or below the mean of the group.
+ &rdquo;</blockquote>
+				</section>
+
+				<section>
+				<p><strong>Linear equating a harder new form (Livingston, 2014)</strong></p>
+					<img src = "images/linear_equating.png" />
+				</section>
+
+				<section>
+					<h3>Linear equating conceptually</h3>
+					<ul>
+					<li>Make the adjusted new form mean equal to the reference score mean</li>
+					<li>Same with standard deviations above and below the mean</li>
+					<li>Do this for every possible value</li>
+					<li>This results in a linear relationship between the new form raw and the new form adjusted scores</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Doing the maths!</h3>
+					<p>Let <em>NF</em> stand for a score on the new form and <em>RF</em> a score on the reference form</p>
+
+					$$
+					\frac{RF - \bar{RF}}{sd(RF)} = \frac{NF - \bar{NF}}{sd(NF)}
+					$$
+					<p class="fragment current-visible">What do these formulas look like?</p>
+				</section>
+
+				<section>
+					<h3>Our new adjusted score</h3>
+					$$
+					RF = \frac{sd(RF)}{sd(NF)}NF + \bar{RF} - \frac{sd(RF)}{sd(NF)}\bar{NF} = \text{adjusted } NF
+					$$
+
+					<p class = "fragment">Note, the adjusted <em>NF</em> score is very unlikely to ever be a whole number</p>
+				</section>
+
+
+				<section>
+					<h3>Example</h3>
+					<table>
+					<tr><td>Form</td><td>Mean</td><td>Standard Deviation</td></tr>
+					<tr><td>Reference</td><td>82</td><td>15</td></tr>
+					<tr><td>New</td><td>79</td><td>14</td></tr>
+					</table>
+					<p>If someone scored an 80 on the new form, what should there reference form score be?</p>
+
+				</section>
+
+
+				<section>
+							$$RF = \frac{15}{14}80 + 82 - \frac{15}{14}79$$
+
+										<pre class="fragment"><code>
+# Do the math in R and save it as RF
+RF <- (15 / 14) * 80 + 82 - (15 / 14) * 79
+
+# Print RF
+RF
+[1] 83.07143
+ 					</code></pre>
+
+ 					<p class = "fragment"><font color = "#1b91ff">Does 83.07413 seem sensible?</font></p>
+				</section>
+				<section>
+					<h3>Problems with linear equating</h3>
+
+					<p class = "fragment">A very high or very low score can equate to a score outside of the range on the reference form</p>
+					<p class = "fragment">Depends heavily on the group of test takers (e.g. are they strong test takers? weak test takers?)</p>
+					<img class = "fragment" src = "images/linear_equate_prob.png" />
+				</section>
+
+				<section>
+					<h3>Equipercentile equating</h3>
+					<blockquote>
+						&ldquo;To equate scores on the new form to scores on the reference form in
+a group of test takers, transform each score on the new form to the score on the reference form that has the same percentile rank in that group.&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+				<h4>Equipercentile equating with a harder new form</h4>
+					<img src = "images/equipercentile.png" />
+				</section>
+
+				<section>
+					<h3>Equipercentile equating</h3>
+					<p class="fragment">15th percentile of the adjusted test form corresponds (as much as possible) to 15th percentile on the reference form and so on</p>
+					<p class="fragment">Adjusted scores will all fall within the range of possible scores on the reference form</p>
+					<p class="fragment">The steepness of the slope of the curve can vary </p>
+					<p class="fragment">Will result in the adjusted test scores having a similar distribution to the reference form</p>
+					<p class="fragment"><font color = "#1b91ff">Will be identical to linear equating when the distribution of scores on the new form has the same shape as the distribution of the scores on the reference form</font></p>
+				</section>
+
+				<section>
+				<h3>Smoothing</h3>
+					<img src = "images/smoothing.png"/>
+				</section>
+
+				<section>
+					<h3>Limitations of equipercentile</h3>
+					<p class="fragment">Equating relationship is bound by the highest and lowest observed score</p>
+					<p class="fragment">On a difficult test, the highest possible raw score might not be observed</p>
+					<p class="fragment">Future administration could result in a higher score being observed</p>
+					<p class="fragment">Smoothing may help with this</p>
+				</section>
+
+				<section>
+					<h4>Again, the discreteness problem (Livingston, 2014)</h4>
+					<img src="images/equi_discrete.png"/>
+					<p class="fragment">Can use interpolation to calculate unobserved raw score</p>
+				</section>
+
+			
+
+				<section>
+					<h3>Concluding remarks on equating</h3>
+					<ul>
+						<li class = "fragment">Lots of other equating methods exist beyond these three</li>
+						<li class = "fragment">Lots of other equating design exist beyond these introduced (briefly)</li>
+						<li class = "fragment">Non-equivalent group designs are tricky</li>
+						<li class = "fragment">The equate package in R does all of this (and more)</li>
+					</ul>
+				</section>				
+		</div>
+		</div>
+
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false ,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+					//{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

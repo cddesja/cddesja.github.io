@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>E-411 PRMA Lecture 7</title>
+
+		<meta name="description" content="Psychological Testing">
+		<meta name="author" content="Christopher David Desjardins">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>E-411 PRMA</h1>
+					<h3>Lecture 7 - Test Development</h3>
+					<p>
+						<small><a href="http://cddesja.github.io">Christopher David Desjardins</a></small>
+					</p>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+					### Construct Validity
+					- Evidence that the test<font color = "#F54B1A"> _measures_</font> the targeted construct and that it can <font color = "#F54B1A">_place_</font> test takers along that construct
+					- Developer <font color = "#F54B1A">MUST</font> have theories about the construct, it's def'n, structure, and relationship to other constructs and other tests
+					- If the test fails to discern test takers, need to know <font color = "#F54B1A">why</font>
+					- <font color = "#01ABE9">Recall all the various potential sources of error in testing</font>
+					- All forms of validity could be considered subsets of construct validity
+					</script>
+				</section>
+
+				<section>
+				<section data-markdown>
+				<script type="text/template">
+				### Construct Validity Evidence
+				- <font color = "#F54B1A">Homogeniety</font>
+					- Test should be <font color = "#F54B1A">homogeneous</font> if measuring one construct
+				- <font color = "#01ABE9">Endorsing test items should be positively correlated with total test score</font>
+					- What kind of correlation is this?
+				- What should we do with unrelated items?
+					- <font color ="#1B346C">What does it mean to throw away/rewrite items?</font>
+				- Homogeneity implies inter item agreement ... <font color = "#1B346C">how can we measure this?</font>
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+				### Construct Validity Evidence - contd
+				- <font color = "#F54B1A">Age</font> and <font color = "#F54B1A">Pre/Post</font>
+				 	- Testtakers taking a test in reading should score higher on comprehension if they are _older_
+					- Students getting tutored in reading between a pre and post test should score higher on the post test
+				- <font color = "#1B346C">Can we predict how anxiety will change as we get older?</font>
+						</script>
+					</section>
+
+
+					<section data-markdown>
+					  <script type="text/template">
+					### More evidence
+					- Groups higher on the construct should have higher scores - <font color = "#F54B1A">method of contrasted groups</font>
+						- Measure tendency toward violent behavior
+							- <font color="#1B346C">Higher scores: The general public or prison inamtes for assault and battery?</font>
+					- <font color = "#F54B1A">Convergent</font> - Test scores on new IQ tests should correlate with scores from an established/validated IQ test (_or a related construct_)
+					- <font color = "#F54B1A">Discriminant</font> - Test scores should be unrelated to scores from another instrument
+						- Students rate each other on leadership and popularity
+						- What does it mean if these two are uncorrelated?
+						</script>
+					</section>
+
+					<section data-markdown>
+					  <script type="text/template">
+					## Factor Analysis
+					- What should we call this factor?
+					- If Nervousness is our new instrument to measure the factor, how well does it do?
+					- What does it mean that social competence is negatively correlated with our factor?
+					<center><img src="images/factor.png"></center>
+					</script>
+					</section>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+				## Test Bias and Fairness
+				- <font color = "#F54B1A">Test bias</font> - extent that a test systematically favors one group
+					- Can test this statistically using logistic regression
+				- At item level:  <font color = "#F54B1A">differential item functioning</font>
+				- Errors by raters
+				- Test fairness - the degree a test is fair and used in an equitable way
+					- What if we administer a test to a group not involved in the validation sample
+				- <font color = "#F54B1A">Why should we care about bias and fairness?</font>
+				</script>
+				</section>
+
+
+
+				<section>
+					<h2>Review</h2>
+					<p>Classical Test Theory &amp Reliability<p>
+					<p class="fragment highlight-red">Test-Retest</p>
+					<p class="fragment highlight-red">Parallel Form</p>
+					<p class="fragment highlight-red">Internal Consistency</p>
+					<p class="fragment highlight-red"> Quantifying uncertainty (i.e. standard error of measurement)</p>
+				</section>
+
+				<section>
+					<h2>Review</h2>
+					<p>Validity<p>
+					<p class="fragment highlight-red">Content</p>
+					<p class="fragment highlight-red">Criterion-Related</p>
+					<p class="fragment highlight-red">Construct</p>
+				</section>
+
+				<section>
+					<h2>Tests, Test, Tests</h2>
+					<img src="images/giphy.gif" height="400" width="712">
+				</section>
+
+
+				<section>
+					<h2>Test Development</h2>
+					<ul>
+						<li>Conceptualization</li>
+						<li>Construction</li>
+						<li>Piloting</li>
+						<li>Item Analysis</li>
+						<li>Revision</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Test Conceptualization</h2>
+					<ul>
+						<li><p class ="fragment">Identify a <font color="#F54B1A">need</font> for this test</p></li>
+						<li><p class ="fragment">Identify a <font color="#F54B1A">purpose</font> for this test</p></li>
+						<li><p class ="fragment">No test exists</p></li>
+						<li><p class ="fragment">People aren't static, so tests need to be revised</p></li>
+						<li><p class="fragment"><font color="#2D2E67">What else should we be thinking about when we're conceptualizing a test?</font></p></li>
+					</ul>
+				</section>
+
+			<section>
+				<section>
+					<h2>Norm or Criterion-Referenced</h2>
+					<center><img src="images/gre.jpg" height = "300"> <img src="images/vangogh.jpg" height = "300"></center>
+					<p class="fragment"><font color="#2D2E67">Does it matter?</font></p>
+				</section>
+				<section>
+					<ul>
+						<li><font color="#F54B1A">Norm-Referenced</font></li>
+							<ul>
+								<li> Want high scores on the test to get the item correct and low scores on the test to get the item incorrect</li>
+								<li> Want to spread out testtakers </li>
+							</ul>
+							<p></p>
+							<li><font color="#F54B1A">Criterion-Referenced</font></li>
+								<ul>
+									<li> Want high scores on the test to get the item correct and low scores on the test to get the item incorrect </li>
+									<li> However, <font color = "#1B346C">each item needs to measure whether a criterion is met</font></li>
+								</ul>
+					</ul>
+				</section>
+			</section>
+
+				<section>
+					<h2>Test Construction</h2>
+					<ul>
+						<li><p class ="fragment">Now that we know why, we have to know <font color="#F54B1A">how</font></p></li>
+						<li><p class ="fragment">We need a set of rules for assigning numbers in measurement <span class="fragment"> - <font color="#F54B1A"> scaling</font><span></p></li>
+						<li><p class ="fragment">In psychology, scales are instruments used to measure traits, states, or abilities</p></li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Scales</h2>
+						<center><img src="images/scale.jpg" height = "300"></center>
+					</section>
+					<section>
+						<h2>Types of Scales</h2>
+						<ul>
+							<li><p class ="fragment">Nominal, ordinal, interval, or ratio</p></li>
+							<li><p class ="fragment">Examples?</p></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Rating Scales</h2>
+						<ul>
+							<li><p class ="fragment">Testtaker indicates their response to an item by selecting among strengths</p></li>
+							<li><p class ="fragment">Examples: Stealing</p></li>
+							<li><p class ="fragment"><font color="#F54B1A">Likert-Type </font>are common rating scales</p></li>
+							<li><p class="fragment">Scores from test could be summed <font color="#F54B1A"> (summative) </font> directly; <font color="#F54B1A">factor analysis</font> or <font color="#F54B1A">item response theory</font> could be used</p></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Scale Issues</h2>
+						<blockquote >
+						&ldquo;Downloading movies is the same as stealing&rdquo;
+					</blockquote>
+					<table>
+						<tbody>
+							<tr>
+								<td><font size="5">Strongly Agree</font></font></td>
+								<td><font size="5">Agree</font></td>
+								<td><font size="5">Neither Agree/Nor Disagree</font></td>
+								<td><font size="5">Disagree</font></td>
+								<td><font size="5">Strongly Disagree</font></dh>
+							</tr>
+						</tbody>
+					</table>
+					<p class ="fragment"><font color="#01ABE9">Are the distances the same betwen the choices?</font></p>
+					<p class ="fragment"><font color="#01ABE9">What might affect are choices?</font></p>
+					</section>
+					<section>
+						<h2>More Scales</h2>
+						<ul>
+							<li><p class ="fragment"><font color="#F54B1A">Paired comparsions</font> - choose between two options scored based on some criteria</li></p>
+							<li><p class ="fragment"><font color="#F54B1A">Comparative scaling</font> - items are arranged based on some criteria and <font color="#F54B1A">categorical scaling</font> - items into two or more categories</li></p>
+							<li><p class ="fragment"><font color="#F54B1A">Guttman scale</font> - items written in a sequential manner such that someone higher on the trait will agree with the strongest statements through the mildest statments</li></p>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Let's write some items that use these scales</h3>
+						<p>Let's brain storm 10 nouns</p>
+					</section>
+
+
+					<section>
+						<h2>Interval Scales</h2>
+						<ul>
+							<li><p class ="fragment">Could use Thurstone's <font color="#F54B1A">equal-appearing scale</font> (p 250 - 251)</li></p>
+							<li><p class ="fragment"><font color = "#1B346C">I am skeptical ... what do you think?</font></li></p>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Let's write a test!</h2>
+					<center><img src="images/math.gif" height = "400" width = "725"></center>
+				</section>
+				<section>
+					<h2>Writing Items</h2>
+					<ul>
+						<li>What content should the items <font color="#01ABE9">cover</font>?</li>
+						<li>What should the <font color="#01ABE9">format</font> of the items be?</li>
+						<li>How <font color="#01ABE9">many</font> items should be written and <font color="#01ABE9">for each content area?</font></li>
+						<li>Book recommends writing 2x the number of items for the <font color="#F54B1A">item bank/pool</font> . . . <font color="#01ABE9">seems a bit excessive</font></li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Types of items</h2>
+						<p class ="fragment"><font color="#F54B1A">Selected-response</font> vs <font color="#F54B1A">constructed response</font></p></li>
+						<center> <img src="images/sel_resp.jpg"height = "300"><img src="images/con_resp.png" height = "300"></center>
+					</section>
+					<section>
+						<h2>Selected-Response</h2>
+						<ul>
+						<li><p class ="fragment">Types</p></li>
+								<ul>
+									<li><p class ="fragment">Multiple-choice</p></li>
+									<li><p class ="fragment">Binary-choice</p></li>
+									<li><p class ="fragment">Matching</p></li>
+								</ul>
+						<li><p class="fragment">Each item will have a <font color="#F54B1A">stem</font>, <font color="#F54B1A">correct chioce</font>, and <font color="#F54B1A">distractors</font></p></li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>A good multiple-choice item in achievement test</li>
+							<ul>
+								<li><p class ="fragment">Only one correct choice</p></li>
+								<li><p class ="fragment">Grammatically parallel alternatives</p></li>
+								<li><p class ="fragment">Alternatives of similar length</p></li>
+								<li><p class ="fragment">Alternatives that fit grammatically with the stem</p></li>
+								<li><p class ="fragment">Include as much information in the stem as possible to avoid repetiiton</p></li>
+								<li><p class ="fragment">Avoids ridiculous distractors</p></li>
+								<li><p class ="fragment">Is not excessively long</p></li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h2>Final thoughts on selected-response</h2>
+						<ul>
+							<li><p class ="fragment">There are more than just true/false for binary-choice items</p></li>
+							<li><p class ="fragment">Matching bank should have more answers choices than items and/or be used more than once</p></li>
+							<li><p class ="fragment">Guessing is a problem in an achievement setting</p></li>
+							<li><p class ="fragment">Always forcing a choice in a non-achievement setting</p></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Constructed response</h2>
+						<ul>
+							<li><p class ="fragment"><font color="#F54B1A">Completion items</font> are fill-in-the blank responses</p></li>
+							<li><p class ="fragment"><font color="#F54B1A">Short-answer</font> items require a response of a few sentences</p></li>
+							<li><p class ="fragment"><font color="#F54B1A">Essay</font> items are long short-answer items demonstrating deeper, more thorough knowledge</p></li>
+							<li><p class ="fragment">More deeply probe a specific portion of a construct, require more time</p></li>
+							<li><p class ="fragment">Subjectivity in scoring essays</p></li>
+							<li><p class ="fragment"><font color="#01ABE9">What reliability statistic would we report here?</font></p></li>
+
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Scoring the items</h2>
+					<ul>
+						<li><p class ="fragment"><font color="#F54B1A">Cumulative model</font> - sum up the items on the test</p></li>
+						<li><p class ="fragment"><font color="#F54B1A">Class scoring</font> - based on pattern of responses placed with similar testtakers</p></li>
+						<li><p class ="fragment"><font color="#F54B1A">Ipsative scoring</font> - score on a scale within a test compared to score on another scale on same test</p></li>
+						<ul>
+						<li><p class ="fragment">Edwards Personal Preference Schedule - measures relative strength of different psychological needs</p></li>
+					</ul>
+						<li><p class="fragment">Could look at both the cumlative scores on seperate scales and the pattern of these scores, <font color="#F54B1A">profile analysis</font></p></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Piloting the test</h2>
+					<center><img src="images/test.gif" height = "400" width = "533"></center>
+				</section>
+
+				<section>
+					<section>
+						<h2>Item analysis</h2>
+						<ul>
+							<li><p class ="fragment">Many different ways to analyze items</p></li>
+							<li><p class ="fragment">Can focus on</p></li>
+							<ul>
+								<li><p class ="fragment">Difficulty of item</p></li>
+								<li><p class ="fragment">Reliability of item</p></li>
+								<li><p class ="fragment">Validity of item</p></li>
+								<li><p class ="fragment">Discrimination of item</p></li>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+					<h2>Item Difficulty</h2>
+					<ul>
+						<li><p class ="fragment"><font color = "#F54B1A"> Proportion of testtakers that get the item correct</font></p></li>
+						<li><p class ="fragment">Higher the item difficulty, the easier the item</p></li>
+						<ul>
+						<li><p class ="fragment"><font color = "#F54B1A"> item-endorsement index</font></p></li>
+					</ul>
+						<li><p class ="fragment"><font color = "#F54B1A"> Can calculate average item difficulty for the test</font></p></li>
+						<li><p class ="fragment">Optimal value = $\frac{\text{Pr(Guess)} + 1}{2}$</p></li>
+					</ul>
+					</section>
+
+					<section>
+						<h2>Item Difficulty - Example </h2>
+							<p class = "fragment"> Administer an item to 10 students and 4 students get the item correct</p>
+							<p class = "fragment"> What is the item's difficulty?</p>
+							<p class = "fragment"> If the item was a multiple choice with 5 distractors, what is the optimal item difficulty?
+					</section>
+
+					<section>
+					<h2>Item Reliability</h2>
+					<ul>
+						<li><p class ="fragment"><font color = "#F54B1A"> Internal consistency of the test</font></p></li>
+						<li><p class ="fragment">Software often calculates changes in a reliability index (e.g. coefficient alpha) when item is deleted</p></li>
+						<li><p class ="fragment"> Examine factor loadings</p></li>
+						<li><p class ="fragment"> Calculate item-reliability index = $s_i * r_{i,\text{ttscore}}$
+							 	<ul>
+									<li class ="fragment"> $s_i$, the standard deviation of item <em>i</em>
+										<li class ="fragment"> $r_{i,\text{ttscore}}$, correlation between item <em>i</em> and total test score
+								</ul>
+					</ul>
+					</section>
+
+					<section>
+					<h2>Item Reliability Index - Example</h2>
+					<table>
+						<tbody>
+							<tr>
+								<td><font size = "5"> Item 1 </font></td>
+							</tr>
+							<tr>
+							<td><font size="5">1</font></td>
+							</tr>
+							<tr>
+								<td><font size="5">0</font></td>
+							</tr>
+							<tr>
+								<td><font size="5">0</font></td>
+							</tr>
+							<tr>
+								<td><font size="5">1</font></td>
+							</tr>
+							<tr>
+								<td><font size="5">1</font></dh>
+								</tr>
+								<tr>
+						</tbody>
+					</table>
+					<p><font size = "5">Assume correlation between item 1 and total test score is 0.7</font></p>
+					</section>
+
+					<section>
+					<h2>Item Validity</h2>
+					<ul>
+						<li><p class ="fragment"><font color = "#F54B1A">Item-validity index</font> = $s_i * r_{i,\text{crit}}$ </p></li>
+						<ul>
+									<li class ="fragment"> $s_i$, the standard deviation of item <em>i</em>
+										<li class ="fragment"> $r_{i,\text{crit}}$, correlation between item <em>i</em> and criterion measure
+								</ul>
+					</ul>
+					</section>
+
+					<section>
+					<h2>Item Discrimination</h2>
+					<ul>
+						<li><p class ="fragment"><font color = "#F54B1A">Point-biserial correlations</font> - Are testtakers with higher abilities more likely to get the item correct? </p></li>
+						<li><p class ="fragment">IRT's discrimination parameter </p></li>
+						<li><p class ="fragment"><font color = "#F54B1A">Item discrimination index</font></p></li>
+							<ol>
+								<li><p class ="fragment">Discretize total test scores into upper and lower 27%</li>
+								<li><p class ="fragment">Calculate number of "high" scores that got item correct and number of "low" scores that got item correct</li>
+								<li><p class ="fragment">Calculate difference</li>
+							</ol>
+						<li><p class ="fragment"><font color = "#F54B1A">Examine distractor functioning</font></p></li>
+					</ul>
+					</section>
+
+				<section>
+					<p> Example in R</p>
+				</section>
+
+				</section>
+				<section>
+				<h2>Issues in Test Development</h2>
+					<p class="fragment"><font color="#01ABE9">Guessing</font></p>
+					<p class="fragment"><font color="#01ABE9">Bias in favor of one group</font> - differential item functioning</p>
+					<p class="fragment"><font color="#01ABE9">Test length and duration of testing session</font></p>
+				</section>
+				<section>
+				<h2>Alternatives to item analysis</h2>
+					<p class="fragment"><font color="#01ABE9">Think Alouds</font></p>
+					<p class="fragment"><font color="#01ABE9">Expert Panels</font></p>
+					<p class="fragment"><font color="#01ABE9">Interviews</font></p>
+					<p class="fragment"><font color="#F54B1A">Qualitative Methods</font></p>
+				</section>
+				<section>
+				<h2>Test Revision</h2>
+					<ul>
+						<li><p class ="fragment"><font color="#01ABE9">On what basis should we revise our items?</font></p></li>
+						<li><p class ="fragment">Too easy or too hard items?</p></li>
+						<li><p class ="fragment">Items with similar difficulty that are measuring the same concept?</p></li>
+						<li><p class ="fragment">Items with negative point-biserial correlations?</p></li>
+						<li><p class ="fragment">Items that on a second/third read through seem unrelated to the construct?</p></li>
+						<li><p class ="fragment">Items with low factor loadings?</p></li>
+						<li><p class ="fragment">Based on IRT?</p></li>
+					</ul>
+				</section>
+				<section>
+				<h2>Standardization</h2>
+					<ul>
+						<li><p class ="fragment">We settle on our revisions</font></p></li>
+						<li><p class ="fragment">Administer revised version to new sample </p></li>
+						<li><p class ="fragment">This becomes our comparsion group, our <font color="#F54B1A">standardization sample</font></p></li>
+					</ul>
+				</section>
+				<section>
+				<h2>Revising old tests</h2>
+					<ul>
+						<li><p class ="fragment">Tests need to be revised when the domain has significantly changed</p></li>
+						<li><p class ="fragment">Content of the items is not understood or changed</p></li>
+						<li><p class ="fragment">Test norms are no longer adequate</p></li>
+						<li><p class ="fragment">Theory underlying the domain has changed</p></li>
+						<li><p class ="fragment">Reliability and validity of the instrument can be improved</p></li>
+					</ul>
+				</section>
+				<section>
+				<h2>Cross- and co-validation</h2>
+					<ul>
+						<li><p class ="fragment"><font color="#F54B1A">Cross-validation</font> - revalidation of a test on a seperate, independent sample of testtakers</p></li>
+						<li><p class ="fragment">Item validities should shrink during this process (<font color="#F54B1A">validity shrinkage</font>)</p></li>
+						<li><p class ="fragment"><font color="#F54B1A">Co-validation</font> - test validation conducted on two or more tests with the same sample of testtakers</font></p></li>
+						<li><p class ="fragment">Creating norms, <font color="#F54B1A">co-norming</font></p></li>
+						<li><p class ="fragment">Cheaper, reduces sampling error by norming on the same sample</p></li>
+					</ul>
+				</section>
+			</div>
+
+		</div>
+
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

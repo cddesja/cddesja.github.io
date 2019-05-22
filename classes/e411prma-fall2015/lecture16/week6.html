@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>E-411 PRMA Week 6</title>
+
+		<meta name="description" content="Psychological Testing">
+		<meta name="author" content="Christopher David Desjardins">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>E-411 PRMA</h1>
+					<h3>Week 6 - Intelligence and Factor Analysis</h3>
+					<p>
+						<small><a href="http://cddesja.github.io">Christopher David Desjardins</a></small>
+					</p>
+				</section>
+
+				<section>
+				<h2>This week</h2>
+					<p>Intelligence</p>
+					<p>Factor Analysis</p>	
+				</section>
+
+				
+							<section>
+				<h3>Our first def'n of Equating</h3>
+				<blockquote>&ldquo;A score on the new form and a score on the reference form are equivalent in a group of test takers if they represent the same relative position in the group.&rdquo;</blockquote>
+				<!-- <p class = "fragment">An equating method is used to specify this relationship</p> -->
+				</section>
+
+				<section>
+					<h3>Mean Equating</h3>
+					<p class = "fragment">The simplest form of equating involves adjusting the scores by the difference in means between the reference and new forms</p>
+					<p class = "fragment">Substraction of values if the new form is easier</p>
+					<p class = "fragment">Addition of values if the new form is harder</p>
+				</section>
+
+				<section>
+					<h3>Example</h3>
+					<p >Suppose the target population's mean on the reference form was 80 and their mean on the new form was 85.</p>
+					<ol class = "fragment">
+						<li>Which form was harder?</li>
+						<li>What should should someone with a 90 on the new form get on the reference form if we were using mean equating?</li> 
+					</ol>
+				</section>
+
+				<section>
+					<h4>Problem with mean equating (Livingston, 2014)</h4>
+					<img src = "images/mean_problem.png" />
+				</section>
+
+				<section>
+					<h3>Linear equating</h3>
+					<p class = "fragment">We need to adjust based on how high or low a test taker's score is from the mean</p>
+					<p class = "fragment"><font color = "#1b91ff">What might we consider doing?</font></p>
+				</section>
+
+				<section>
+					<h3>Equating better def'n</h3>
+					<blockquote>&ldquo;
+A score on the new form and a score on the reference form are equivalent in a group of test takers if they are the same number of standard deviations above or below the mean of the group.
+ &rdquo;</blockquote>
+				</section>
+
+				<section>
+				<p><strong>Linear equating a harder new form (Livingston, 2014)</strong></p>
+					<img src = "images/linear_equating.png" />
+				</section>
+
+				<section>
+					<h3>Linear equating conceptually</h3>
+					<ul>
+					<li>Make the adjusted new form mean equal to the reference score mean</li>
+					<li>Same with standard deviations above and below the mean</li>
+					<li>Do this for every possible value</li>
+					<li>This results in a linear relationship between the new form raw and the new form adjusted scores</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Doing the maths!</h3>
+					<p>Let <em>NF</em> stand for a score on the new form and <em>RF</em> a score on the reference form</p>
+
+					$$
+					\frac{RF - \bar{RF}}{sd(RF)} = \frac{NF - \bar{NF}}{sd(NF)}
+					$$
+					<p class="fragment current-visible">What do these formulas look like?</p>
+				</section>
+
+				<section>
+					<h3>Our new adjusted score</h3>
+					$$
+					RF = \frac{sd(RF)}{sd(NF)}NF + \bar{RF} - \frac{sd(RF)}{sd(NF)}\bar{NF} = \text{adjusted } NF
+					$$
+
+					<p class = "fragment">Note, the adjusted <em>NF</em> score is very unlikely to ever be a whole number</p>
+				</section>
+
+
+				<section>
+					<h3>Example</h3>
+					<table>
+					<tr><td>Form</td><td>Mean</td><td>Standard Deviation</td></tr>
+					<tr><td>Reference</td><td>82</td><td>15</td></tr>
+					<tr><td>New</td><td>79</td><td>14</td></tr>
+					</table>
+					<p>If someone scored an 80 on the new form, what should there reference form score be?</p>
+
+				</section>
+
+
+				<section>
+							$$RF = \frac{15}{14}80 + 82 - \frac{15}{14}79$$
+
+										<pre class="fragment"><code>
+# Do the math in R and save it as RF
+RF <- (15 / 14) * 80 + 82 - (15 / 14) * 79
+
+# Print RF
+RF
+[1] 83.07143
+ 					</code></pre>
+
+ 					<p class = "fragment"><font color = "#1b91ff">Does 83.07413 seem sensible?</font></p>
+				</section>
+				<section>
+					<h3>Problems with linear equating</h3>
+
+					<p class = "fragment">A very high or very low score can equate to a score outside of the range on the reference form</p>
+					<p class = "fragment">Depends heavily on the group of test takers (e.g. are they strong test takers? weak test takers?)</p>
+					<img class = "fragment" src = "images/linear_equate_prob.png" />
+				</section>
+
+				<section>
+					<h3>Equipercentile equating</h3>
+					<blockquote>
+						&ldquo;To equate scores on the new form to scores on the reference form in
+a group of test takers, transform each score on the new form to the score on the reference form that has the same percentile rank in that group.&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+				<h4>Equipercentile equating with a harder new form</h4>
+					<img src = "images/equipercentile.png" />
+				</section>
+
+				<section>
+					<h3>Equipercentile equating</h3>
+					<p class="fragment">15th percentile of the adjusted test form corresponds (as much as possible) to 15th percentile on the reference form and so on</p>
+					<p class="fragment">Adjusted scores will all fall within the range of possible scores on the reference form</p>
+					<p class="fragment">The steepness of the slope of the curve can vary </p>
+					<p class="fragment">Will result in the adjusted test scores having a similar distribution to the reference form</p>
+					<p class="fragment"><font color = "#1b91ff">Will be identical to linear equating when the distribution of scores on the new form has the same shape as the distribution of the scores on the reference form</font></p>
+				</section>
+
+				<section>
+				<h3>Smoothing</h3>
+					<img src = "images/smoothing.png"/>
+				</section>
+
+				<section>
+					<h3>Limitations of equipercentile</h3>
+					<p class="fragment">Equating relationship is bound by the highest and lowest observed score</p>
+					<p class="fragment">On a difficult test, the highest possible raw score might not be observed</p>
+					<p class="fragment">Future administration could result in a higher score being observed</p>
+					<p class="fragment">Smoothing may help with this</p>
+				</section>
+
+				<section>
+					<h4>Again, the discreteness problem (Livingston, 2014)</h4>
+					<img src="images/equi_discrete.png"/>
+					<p class="fragment">Can use interpolation to calculate unobserved raw score</p>
+				</section>
+			
+
+				<section>
+					<h3>Concluding remarks on equating</h3>
+					<ul>
+						<li class = "fragment">Lots of other equating methods exist beyond these three</li>
+						<li class = "fragment">Lots of other equating design exist beyond these introduced (briefly)</li>
+						<li class = "fragment">Non-equivalent group designs are tricky</li>
+						<li class = "fragment">The equate package in R does all of this (and more)</li>
+					</ul>
+				</section>	
+
+				<section>
+				<h2>Intelligence</h2>
+					<p class="fragment">What is intelligence?</p>
+					<p class="fragment">What makes someone intelligent?</p>
+				</section>
+
+				<section>
+				<h2>Intelligence is ...</h2>
+					<ul>
+						<li><p class="fragment highlight-red">There is no consensus on what intelligence is</p></li>
+						<li><p class="fragment highlight-red">There is no single instrument to measure intelligence</p></li>
+						<li><p class="fragment">To Sternberg's public, intelligence means</p></li>
+							<ul>
+								<li><p class="fragment">"Reasons logically and well"</p></li>
+								<li><p class="fragment">"Reads widely"</p></li>
+								<li><p class="fragment">"Displays common sense"</p></li>
+								<li><p class="fragment">"Keeps an open mind"</p></li>
+								<li><p class="fragment">"Reads with high comprehensions"</p></li>
+							</ul>
+					</ul> 
+				</section>
+
+				<section>
+				<h2>Intelligence could involve ...</h2>	
+					<ul>
+						<li><p class="fragment">Problem-solving ability</p></li>
+						<li><p class="fragment">Verbal ability</p></li>
+						<li><p class="fragment">Social competence</p></li>					
+					</ul>
+				</section>
+				
+				<section>
+				<h2>Interactionist views of intelligence</h2>
+					<p class="fragment"><font color="#1b91ff">Galton</font> -  possessing great sensory (hearing, visual) abilities</p>
+					<p class="fragment"><font color="#1b91ff">Binet</font> - intelligence involves reasoning, judgment, memory, and abstraction and these cannot be seperated</p>
+					<p class="fragment"><font color="#1b91ff">Wechsler</font> - intelligence is an aggregate capacity made of measurable, qualitatively different abilities that interact in a complex, non-additive fashion</p>
+					<p class="fragment"><font color="#1b91ff">Wechsler</font> - measurement of intelligence affected by nonintellective factors</p>
+					<p class="fragment"><font color="#1b91ff">Piaget</font> - evolving biological adaption to the world</p>
+				</section>
+
+				<section>
+				<h2>Factor analysis and intelligence</h2>
+					<ul>
+						<li><p class"fragment">Spearman (1927), existence of a general ability factor, <i>g</i> and specific factors, <i>s</i></p></li>
+						<li><p class="fragment">Intelligence tests with high correlations possess high <i>g</i> </p></li>
+						<li><p class="fragment"><font color="#1b91ff">Group factors</font> common to a group of activities but not <i>g</i></p>
+						<li><p class="fragment">Thurstone purposed a 7 factor structure of intelligence but could not escape <i>g</i></p>
+						<li><p class="fragment">Gardner adds <font color="#1b91ff">interpersonal</font> (working with others) and <font color="#1b91ff">intrapersonal</font> (working with yourself)</p>
+					</ul>
+				</section>
+
+				<section>
+				<h2>Motivation for the CHC model</h2>
+					<ul>
+						<li><p class="fragment">Cattell proposed a theory of intelligence that consists of <font color="#1b91ff">crystallized</font> and <font color="#1b91ff">fluid intelligence</font></li>
+						<li><p class="fragment"><font color="#1b91ff">crystallized intelligence, <i>Gc</i></font>, ability to use skills, experience, &amp knowledge (e.g. retrieving and applying information)</p></li>
+						<li><p class="fragment"><font color="#1b91ff">fluid intelligence, <i>Gf</i></font>, capacity for solving novel problems </p>
+						<li><p class="fragment">Horn added additional factors <i>G</i>s</p>
+						<li><p class="fragment">Carroll proposed a 3 layered hierarchical view with <i>g</i> on the top, then factors similar to Cattell's and Horn's, and specific factors depending on the second-level factors</p>
+					</ul>
+				</section>
+
+				<section>
+				<h2>Carroll's model</h2>
+					<center><img src="images/carroll_intelligence.png" height = "400"></center>
+				</section>
+
+				<section>
+				<h2>CHC model</h2>
+					<p class = "fragment">McGrew and colleagues tried to reconcile these approaches</p>
+					<p class="fragment">Proposed a modified Carroll model without a <i>g</i></p>
+					<p class="fragment">Omission of <i>g</i> based on the lack of utility for their needs</p>
+					<p class="fragment">McGrew calls for adoption of the CHC model and made <a href="http://www.iapsych.com/wmfhcaarchive/map.htm">data available here</a></p>
+				</section>
+
+				<section>
+				<h2>CHC model</h2>
+					<p class = "fragment"> There are 10 broad-stratum abilities</p>
+					<ul>
+						<li><p class = "fragment">fluid, crystallized, quantitative knowledge, reading/writing ability, short-term memory, visual processing, auditory processing, long-term storage/retrieval, processing speed (perform automatic cognitive tasks, couple minutes), and decision time/speed (reaction time, couple seconds)</p></li>
+					</ul>
+					<p class = "fragment"> There are 70 narrow-stratum abilities</p>
+				</section>
+
+
+				<section>
+				<h2>Information-processing framework</h2>
+					<ul>
+						<li><p class"fragment">Rather than using factor analysis to derive "what" intelligence is, <font color="#1b91ff">examine how information is processed</font></p></li>
+						<li><p class="fragment"><font color="#1b91ff">simultaneous processing</font>, integration at once</p></li>
+						<li><p class="fragment"><font color="#1b91ff">successive processing</font>, sequential integration</p>
+						<li><p class="fragment">Extant tests do not take into account problem solving strategy</p></li>
+						<li><p class="fragment">Sternberg proposed <font color="#1b91ff">successful intelligence</font>, how well we adapt, share, shape, select environments that confirm to personal and societal success</p>
+					</ul>
+				</section>
+
+				<section>
+				<h2>How to measure intelligence?</h2>
+				<ul>
+					<li>Myriad of tasks developed depending on age of testtaker</li>
+					<li>Infants focused on sensorimotor skills; shift towards verbal and performance abilities as children age</li>
+					<li><font color="#1b91ff">Mental age</font> has fallen out of favor</li>
+					<li>For children, tests often used for school placement</li>
+					<li>Adults, test more diverse and typically used clinically</li>
+				</ul>
+				</section>
+
+				<section>
+				<h2>Problems in intelligence</h2>
+				<ul>
+					<li><p class="fragment highlight-blue">Nature vs. nurture</p></li>
+						<ul>
+							<li>Preformationism &amp predeterminism - slave to your genes</li>
+							<li>Twin studies</li>
+							<li>Interactionist view - unlimited potential</li>
+						</ul>
+					<li><p class="fragment highlight-blue">Stability</p></li>
+						<ul>
+							<li>Young adult intelligence most important predictor of intelligence of older adults</li>
+							<li>Aging, physical/mental health, medications - confounders</li>
+							<li>"Early ripe, early rot"</li>
+						</ul>
+				</ul>
+				</section>
+
+				<section>
+				<h2>More problems</h2>
+				<p><font color="#1b91ff">Flynn effect</font> - rise in intelligence test scores expected to occur on a normed intelligence test  from the date the test was first normed. </p>
+				<p><a href="https://www.youtube.com/watch?v=9vpqilhW9uI">TED Talk by Flynn</a></p>
+				<p>Personality \(\equiv\) Intelligence</p>
+				<p>Gender differences?</p>
+				<p>Family effects starting in the womb?</p>
+				<p>Cultural considerations? Culture-loading and creation of culture-fair tests</p>
+				</section>
+
+				<section>
+				<h2>Stanford-Binet IQ test</h2>
+					<ul>
+						<li>Conceived by Binet to screen for children with developmental disabilities</li>
+						<li>Originally intelligence calculated as the ratio of mental age to true age</li>
+						<li>Deviation score, mean of 100 and standard deviation of 15</li>
+						<li>Measures fluid reasoning (fluid), knowledge (crystallized), quantitative knowledge, visual-spatial, and working memory (see Table 10 - 2)</li>
+						<li>Adaptive</li>
+					</ul>
+				</section>
+
+				<section>
+				<h2><a href="http://www.riverpub.com/products/sb5/pricing.html">Fifth edition</a></h2>
+					<ul>
+						<li><p class="fragment">Full scale IQ from ten subtests</p></li>
+						<li><p class="fragment">Subtest scores can be combined to get other composite scores (e.g. verbal score)</p></li>
+						<li><p class="fragment">Standardized for the USA population aged 2 to 85</p></li>
+						<li><p class="fragment">Manual reports high internal consistency, test-restest, and inter-rater reliability (though items with low reliability were pruned)</p></li>
+						<li><p class="fragment"> Criterion-Related VE from concurrent and predictive data</p></li>
+						<li><p class="fragment">Use in a clinical population and factor structure unclear</p></li>
+
+					</ul>
+				</section>
+
+				<section>
+				<h2><a href ="http://www.pearsonclinical.com/psychology/products/100000392/wechsler-adult-intelligence-scalefourth-edition-wais-iv.html#tab-pricing">Weschler intelligence tests</a></h2>
+				<ul>
+					<li><p class="fragment">Age-appropriate tests for very young children, children, adults</p></li>
+					<li><p class="fragment">All originally used a verbal, performance, and FSIQ, now only young children uses V and P scales</p></li>
+					<li><p class="fragment">Many subtests and items specific just to Weschler's tests (Table 10 - 3)</p></li>
+					<li><p class="fragment">Consists of core subtest and supplementals used to extract clinical information</p></li>
+					<li><p class="fragment">Short forms exist, but discouraged</p></li>
+					<li><p class="fragment">Good psychometric properties</p></li>
+				</ul>
+				</section>
+
+				<section>
+				<h2>Comparison and other tests</h2>
+					<ul>
+						<li><p class="fragment">Both purport to measure intelligence</p></li>
+						<li><p class="fragment">Highly correlated, differ by amount of <i>g</i></p></li>
+						<li><p class="fragment">Both work within the CHC model</p></li>
+						<li><p class="fragment">Both represent gold standard</p></li>
+						<li><p class="fragment">Different factor structures and definitions of intelligence</p></li>
+						<li><p class="fragment">Kaufman tests focus on processing not structure</p></li>
+					</ul>
+				</section>
+
+				<section>
+				<h2>Group tests</h2>
+				<ul>
+					<li><p class="fragment">USA army developed tests for recruits in WWI</p></li>
+					<li><p class="fragment">Alpha, those who could read, Beta, those who couldn't</p></li>
+					<li><p class="fragment">Assigned duty and service based on performance</p></li>
+					<li><p class="fragment">Tests used in post-war because they were much cheaper</p></li>
+					<li><p class="fragment">Later, Army General Cliassification Test and Armed Service Vocational Aptitute Battery</p></li>
+					<li><p class="fragment">Also used in the schools in the USA for placement (not as much now)</p></li>
+				</ul>
+				</section>
+				</div>
+		</div>
+
+
+
+
+
+
+
+
+						
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false ,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+					//{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
