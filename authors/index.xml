@@ -138,15 +138,6 @@
     </item>
     
     <item>
-      <title></title>
-      <link>https://cddesja.github.io/authors/admin/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://cddesja.github.io/authors/admin/</guid>
-      <description>Chris Desjardins is a visiting assistant professor of statistics at St. Michael’s College. His research interests include statistical graphics, data science, big data, R, and statistics education.</description>
-    </item>
-    
-    <item>
       <title>Okan Bulut</title>
       <link>https://cddesja.github.io/authors/okan-bulut/</link>
       <pubDate>Fri, 05 Apr 2019 08:00:00 +0000</pubDate>
@@ -156,12 +147,21 @@
     </item>
     
     <item>
-      <title>Robert Ford</title>
-      <link>https://cddesja.github.io/authors/robert-ford/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <title>Danielle Arigo</title>
+      <link>https://cddesja.github.io/authors/danielle-arigo/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://cddesja.github.io/authors/robert-ford/</guid>
+      <guid>https://cddesja.github.io/authors/danielle-arigo/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cddesja.github.io/authors/admin/</link>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://cddesja.github.io/authors/admin/</guid>
+      <description>Chris Desjardins is a visiting assistant professor of statistics at St. Michael’s College. His research interests include statistical graphics, data science, big data, R, and statistics education.</description>
     </item>
     
   </channel>

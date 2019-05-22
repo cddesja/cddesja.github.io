@@ -39,12 +39,12 @@
     </item>
     
     <item>
-      <title>An example preprint / working paper</title>
-      <link>https://cddesja.github.io/publication/preprint/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <title>Mediators of two selective prevention interventions targeting both obesity and eating disorders</title>
+      <link>https://cddesja.github.io/publication/rohde-2018/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://cddesja.github.io/publication/preprint/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.</description>
+      <guid>https://cddesja.github.io/publication/rohde-2018/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -54,15 +54,6 @@
       
       <guid>https://cddesja.github.io/publication/hemp-book/</guid>
       <description>The Handbook of Educational Measurement and Psychometrics Using R covers a variety of topics, including classical test theory; generalizability theory; the factor analytic approach in measurement; unidimensional, multidimensional, and explanatory item response modeling; test equating; visualizing measurement models; measurement invariance; and differential item functioning.</description>
-    </item>
-    
-    <item>
-      <title>An example journal article</title>
-      <link>https://cddesja.github.io/publication/journal-article/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://cddesja.github.io/publication/journal-article/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.</description>
     </item>
     
   </channel>
