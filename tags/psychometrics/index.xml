@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Psychometrics on C. D. Desjardins</title>
+    <title>psychometrics on C. D. Desjardins</title>
     <link>https://cddesja.github.io/tags/psychometrics/</link>
-    <description>Recent content in Psychometrics on C. D. Desjardins</description>
+    <description>Recent content in psychometrics on C. D. Desjardins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 May 2018 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 02 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cddesja.github.io/tags/psychometrics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Handbook of Educational Measurement and Psychometrics Using R</title>
+      <title>The Handbook of Educational Measurement and Psychometrics Using R</title>
       <link>https://cddesja.github.io/publication/hemp-book/</link>
-      <pubDate>Wed, 02 May 2018 00:00:00 -0500</pubDate>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://cddesja.github.io/publication/hemp-book/</guid>
-      <description></description>
+      <description>The Handbook of Educational Measurement and Psychometrics Using R covers a variety of topics, including classical test theory; generalizability theory; the factor analytic approach in measurement; unidimensional, multidimensional, and explanatory item response modeling; test equating; visualizing measurement models; measurement invariance; and differential item functioning.</description>
     </item>
     
   </channel>
