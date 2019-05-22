@@ -55,6 +55,16 @@
   </url>
   
   <url>
+    <loc>https://cddesja.github.io/talk/example/</loc>
+    <lastmod>2019-05-01T12:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/talk/</loc>
+    <lastmod>2019-05-01T12:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cddesja.github.io/authors/admin/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
@@ -129,10 +139,6 @@
   
   <url>
     <loc>https://cddesja.github.io/post/</loc>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/talk/</loc>
   </url>
   
 </urlset>

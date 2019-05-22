@@ -6,9 +6,19 @@
     <description>Recent content in Recent &amp; Upcoming Talks on C. D. Desjardins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 01 May 2019 12:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cddesja.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>All Power Analyses Are Wrong, How To Be More Right</title>
+      <link>https://cddesja.github.io/talk/example/</link>
+      <pubDate>Wed, 01 May 2019 12:30:00 +0000</pubDate>
+      
+      <guid>https://cddesja.github.io/talk/example/</guid>
+      <description>An example talk using Academic&amp;rsquo;s Markdown slides feature.</description>
+    </item>
     
   </channel>
 </rss>
