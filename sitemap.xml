@@ -325,11 +325,6 @@
   </url>
   
   <url>
-    <loc>https://cddesja.github.io/authors/admin/</loc>
-    <lastmod>2018-05-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://cddesja.github.io/publication_types/5/</loc>
     <lastmod>2018-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -368,6 +363,10 @@
     <loc>https://cddesja.github.io/tags/psychometrics/</loc>
     <lastmod>2018-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/authors/admin/</loc>
   </url>
   
   <url>
