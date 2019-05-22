@@ -97,6 +97,17 @@
   </url>
   
   <url>
+    <loc>https://cddesja.github.io/classes/e411prma-fall2015/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/classes/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cddesja.github.io/authors/anna-m.-parenteau/</loc>
     <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -250,12 +261,6 @@
   </url>
   
   <url>
-    <loc>https://cddesja.github.io/tags/r/</loc>
-    <lastmod>2019-05-01T12:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cddesja.github.io/talk/</loc>
     <lastmod>2019-05-01T12:30:00+00:00</lastmod>
   </url>
@@ -268,6 +273,12 @@
   
   <url>
     <loc>https://cddesja.github.io/tags/type-i-type-ii-errors/</loc>
+    <lastmod>2019-05-01T12:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/r/</loc>
     <lastmod>2019-05-01T12:30:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -453,22 +464,12 @@
   </url>
   
   <url>
-    <loc>https://cddesja.github.io/classes/e411prma-fall2015/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cddesja.github.io/classes/e411prma-spring2015/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cddesja.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/classes/</loc>
     <priority>0</priority>
   </url>
   
