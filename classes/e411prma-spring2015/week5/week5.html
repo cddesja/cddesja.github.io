@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>E-411 PRMA Week 5</title>
+
+		<meta name="description" content="Psychological Testing">
+		<meta name="author" content="Christopher David Desjardins">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>E-411 PRMA</h1>
+					<h3>Week 5 - Item Response Theory and Generalizability Theory</h3>
+					<p>
+						<small><a href="http://cddesja.github.io">Christopher David Desjardins</a></small>
+					</p>
+				</section>
+
+				<section>
+				<h2>This Week</h2>
+					<p>Item Response Theory</p>
+					<p>Generalizability Theory</p>	
+				</section>
+
+				<section>
+				<h2>Review</h2>
+					<p  class="fragment highlight-blue">Classical Test Theory</p>				
+					<p class="fragment">X = T + E</p>
+					<p class="fragment">\(\sigma^2_X = \sigma^2_T + \sigma^2_E\) </p>
+					<p class="fragment">\(\sigma_{\text{SEM}} = \sigma \sqrt{1 - r_{xx}}\) </p>
+				</section>
+
+				<section>
+				<h2>Critiques of CTT</h2>
+					<ul>
+						<li>Person are measured on number correct</li>
+						<li>Score dependent on number of items on a test and their difficulty</li>
+						<li>Scores are limited to fixed values</li>
+						<li>Scores are interpretable on a within-group normative basis</li>
+						<li>SEM is group dependent and constant for a group</li>
+						<li>Item and person fit evaluation difficult </li>
+						<li>Test development different depending on type of test</li>
+					</ul>
+				</section>
+
+				<section>
+				<h2>Item Response Theory Rationale</h2>
+					<ul>
+						<li><p class="fragment">In an nutshell, IRT is able to address all of these criticisms</p></li>
+						<li><p class="fragment">BUT, makes stronger assumptions and requires a larger sample size</p></li>
+					</ul> 
+				</section>
+				
+				<section>
+				<h2>What is Item Response Theory?</h2>
+					<p class="fragment highlight-blue">A measurement perspective</p>
+					<p class="fragment">A series of non-linear models</p>
+					<p class="fragment">Links <font color="#ff2c2d">manifest</font> variables with <font color="#ff2c2d">latent</font> variables</p>
+					<p class="fragment">Latent characteristics of individuals and items are predictors of observed responses</p>
+					<p class="fragment">Not a "how" or "why" theory</p>
+				</section>
+
+				<section>
+				<h2>Generalized Anxiety Disorder</h2>
+					<ul>
+						<li><p>Anxiety could be loosely defined as feelings that range from general uneasienss to incapcitating attacks of terror</p></li>
+						<li><p class="fragment highlight-blue">Is anxiety latent and is it continuous, categorical, or both?</p></li>
+						<ul>
+							<li><p class = "fragment"><font color="#ff2c2d">Categorical</font> - Individuals can be placed into a high anxiety latent class and a low anxiety latent class</p></li>
+							<li><p class = "fragment"><font color="#ff2c2d">Continuous</font> - Individuals fall along an anxiety continuum</p></li>
+							<li><p class = "fragment"><font color="#ff2c2d">Both</font> - Given a latent class (e.g. the high anxiety latent class), within this class there is a continuum of even greater anxiety.</p></li>
+						</ul>
+					</ul>
+				</section>
+
+				<section>
+				<h2>Properties of IRT</h2>
+					<ol>
+						<li>Manifest variables differentiate among persons at different locations on the latent scale</li>
+						<li>Items are characterized by location and ability to discriminate among persons</li>
+						<li>Items and persons are on the same scale</li>
+						<li>Parameters estimated in a sample are linearly transformable to estimates of those parameters from another sample</li>
+						<li>Yields scores that are independent of number of items, item difficulty, and the individuals it is measured on, and are placed on a real-number scale</li>
+					</ol>
+				</section>
+
+				<section>
+				<h2>Assumptions of IRT</h2>
+					<center><img src="images/math_ability.png" height = "180"></center>
+					<p class="fragment"><font color="#ff2c2d">Response of a person to an item can be modeled with the a specific item reponse function</font></p>
+				</section>
+
+				<section>
+				<h2>IRT conceptually</h2>
+					<center><img src="images/irt_graph.png" height = "400"></center>
+				</section>
+
+				<section>
+				<h2>Item Response Function (IRF)</h2>
+					<center><img src="images/item3.png" height = "500"></center>
+				</section>
+
+
+				<section>
+					<h2>The Rasch Model</h2>
+					<p class="fragment"><strong>The logistic model</strong></p>
+					<p class="fragment">\(p(x = 1 | z) = \frac{e^z}{1 - e^z}\) </p>
+					<p class="fragment"><strong>The logistic regression model</strong></p>
+					<p class="fragment">\(p(x = 1 | g) = \frac{e^{\beta_0 + \beta_1g}}{1 - e^{\beta_0 + \beta_1g}}\) </p>
+					<p class="fragment"><strong>The Rasch model</strong></p>
+					<p class="fragment">\(p(x_j = 1 | \theta, b_j) = \frac{e^{\theta - b_j}}{1 - e^{\theta - b_j}}\) </p>
+					<p class="fragment"><font color="#ff2c2d">So, the Rasch model is just the logistic regression model in disguise</font></p>
+				</section>
+
+
+				<section>
+				<h2>What does \(\theta - b_j\) mean</h2>
+					<pre><code>
+rasch <- function(person, item) {
+exp(person - item\) (1 + exp(person - item))
+}
+rasch(person = 1, item = 1.5)
+# [1] 0.3775407
+
+rasch(person = 1, item = 1)
+# [1] 0.5
+					</code></pre>
+				</section>
+
+				<section>
+				<object data=http://130.208.71.121:3838/e411prma/rasch width="1100" height="600"> <embed src=http://130.208.71.121:3838/e411prma/rasch width="800" height="400"> </embed> Error: Embedded data could not be displayed. </object>
+				</section>
+
+
+
+				<section>
+				<object data=http://130.208.71.121:3838/e411prma/twopl width="1100" height="600"> <embed src=http://130.208.71.121:3838/e411prma/twopl width="800" height="400"> </embed> Error: Embedded data could not be displayed. </object>
+				</section>
+
+				<section>
+				<object data=http://130.208.71.121:3838/e411prma/threepl width="1100" height="600"> <embed src=http://130.208.71.121:3838/e411prma/threepl width="800" height="400"> </embed> Error: Embedded data could not be displayed. </object>
+				</section>
+
+				<section>
+				<h2>Guessing Parameter</h2>
+				<center><img src="images/guess.png"></center>
+				</section>
+
+				<section>
+				<h2>Standard Error of Estimate and Information</h2>
+					<ul>
+						<li><p class = "fragment">Similar to the SEM, the <font color="#ff2c2d">standard error of estimate (SEE)</font> allows us to quantify uncertainty about score of a person within IRT </p></li>
+						<li><p class = "fragment"><font color="#ff2c2d">Information</font> is the inverse of the SEE and tells us how precise our estimates</p></li>
+						<li><p class = "fragment">We can use this to select items and develop tests!</p></li>
+					</ul>
+				</section>
+				
+				<section>
+				<h2>Item Information Function</h2>
+				<center><img src="images/iif.png" height = "500"></center>
+				</section>
+				
+				<section>
+				<h2>Test Information Function</h2>
+				<center><img src="images/tif.png" height = "500"></center>
+				</section>
+				
+				<section>
+				<h2>Generalizability Theory</h2>
+					<p class = "fragment current-visible">Reliability is essentially a measure of consistency in your scores (think of a dart board)</p>
+					<p class = "fragment"><font color = "#ff2c2d">Generalizability theory</font>, the child of CTT, allows a researcher to <font color = "#1b91ff">quantify</font> and <font color = "#1b91ff">distinguish</font> the <font color = "#1b91ff">different sources of error</font> in observed scores</p>
+					<p class = "fragment current-visible">The CTT model is: \(X = T + E\) </p>
+					<p class = "fragment">The G-Theory model is: \(X = \mu_p + E_1 + E_2 + \dots + E_H\) </p>
+					<p class = "fragment">\(\mu_p\)  - universe score and \(E_h\)  - are sources of error</p>
+				</section>
+
+				<section>
+				<h2>G studies</h2>
+				<ul>
+					<li>Suppose we develop a test to measure Icelandic writing abilities</li>
+					<li>We have various <font color = "#1b91ff">items</font>, people that will score the test (<font color = "#1b91ff">raters</font>), and <font color = "#1b91ff">people</font> that will take the test</li>
+					<li>Item and rater are referred to as <font color = "#ff2c2d">facets</font> and any rater could rate any item (they are fully crossed)</li>
+					<li>They could be considered <font color = "#1b91ff">fixed</font> or <font color = "#1b91ff">random</font> in a D study</li>
+					<li><font color = "#ff2c2d">Universe</font> are the conditions of measurement (item and rater) and <font color = "#ff2c2d">population</font> are the objects of measurement (people taking the test)</li>
+				</ul>
+				</section>
+
+				<section>
+				<h2>Our model</h2>
+				<p class = "fragment">\(X_{pir} = \mu + v_p + v_i + v_r + v_{pi} + v_{pr} + v_{ir} + v_{pir}\)</p>
+
+				<p class = "fragment">If we assume that that these effects are uncorrelated then</p>
+
+				<p class = "fragment">\(\sigma^2(X_{pir}) = \sigma^2_p + \sigma^2_i + \sigma^2_r + \sigma^2_{pi} + \sigma^2_{pr} + \sigma^2_{ir} + \sigma^2_{pir}\)</p>
+
+				<p class = "fragment">These are our <font color = "#1b91ff">random effects variance components</font></p>
+
+				<p class = "fragment">This forms the basis of our <font color = "#1b91ff">D study</font> which can investigate different scenarios and allow us to calculate reliability estimates</p>
+				</section>
+
+				<section>
+				<h2>D study</h2>
+				<p class = "fragment">In a D study, we partitition our variance into 3 components: <font color = "#ff2c2d">universe score</font>, <font color = "#ff2c2d">relative error</font>, and <font color = "#ff2c2d">absolute error</font> variance.</p>
+				<p class = "fragment"><font color = "#ff2c2d">Relative error</font> and the <font color = "#ff2c2d">generalizability coefficient</font>, are analagous to \(\sigma^2_E\) and reliability in CTT, and is based on <font color = "#1b91ff">comparing examinees</font></p>
+				<p class = "fragment">\(E\rho^2 = \frac{\sigma^2_\tau}{\sigma^2_\tau + \sigma^2_\delta}\)</p>
+				<p class = "fragment">Absolute error variance is for making <font color = "#1b91ff">absolute decisions</font> about examinees</p>
+				<p class = "fragment">Dependability coefficient, \(\phi = \frac{\sigma^2_\tau}{\sigma^2_\tau + \sigma^2_\Delta}\)</p>
+				</section>
+
+				<section>
+				<h2>Comparing G-Theory to CTT</h2>
+				<ul>
+					<li>CTT reliability estimates are often too high</li>
+					<li>Especially true when more than 1 random effect</li>
+					<li>Different D-study scenarios allow you to investigate what-ifs based on treatment of effects, design, and number of subjects</li>
+						<ul>
+							<li>Universe score variance gets smaller if we consider a facet fixed instead of random</li>
+							<li>Larger D study sample sizes lead to small error variances</li>
+							<li>Nested D study designs usually lead to small error variances and larger coefficients</li>
+						</ul>
+				</ul>
+				</section>
+			</div>
+
+		</div>
+
+
+
+						
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false ,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+					//{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

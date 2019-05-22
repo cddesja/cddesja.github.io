@@ -1,0 +1,606 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default_hr.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+<!-- logo slide
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo.png"></span>
+    </article>
+  </slide> -->
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/default_clear.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Today</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Classical Test Theory</li>
+      <!-- subbullets  <li>Title capitalization is title case
+          <ul>
+            <li>Subtitle capitalization is title case</li>
+          </ul>
+        </li> -->
+        <li>Reliability</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Perfect Measurements?</h2>
+    </hgroup>
+    <article>
+    <center><img src="images/ruler.png" class="reflect" alt="Metric Ruler" title="Metric Ruler" height = "200"></center>
+    <p></p>
+      <ul class="build fade">
+        <li>Recall: No instrument is perfect and no measurement is without error </li>
+        <li class="green">More difficult in psychology</li>
+      </ul>
+    </article>
+    <footer class="source">source: <a href="http://pixabay.com/en/ruler-centimeter-length-instrument-150936/">Ruler</a></footer>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Dealing with Imperfect Measurements</h2>
+    </hgroup>
+    <article>
+      <ul class="build fade">
+        <li>Error is part of life</li>
+        <li>Minimize error</li>
+        <li>Partition out error</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Classical Test Theory Definition</h2>
+    </hgroup>
+    <article>
+      Rodriguez (2015):
+      <p></p>
+        <ul class="build">
+        <li>1. No single approach to the measurement of any construct is universally accepted.</li>
+          <li>2. Psychological measurements are usually based on limited samples of behavior.</li>
+          <li>3. The measurement obtained is always subject to error.</li>
+          <li>4. The lack of well-defined units on the measurement scales poses still another problem.</li>
+          <li>5. Psychological constructs cannot be defined only in terms of operational definitions but must also have demonstrated relationships to other constructs or observable phenomena.</li>
+        </ul>
+        <footer class="source">source: <a href="http://edmeasurement.net/resources/Introctt.html">Educational Measurement</a></footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup> 
+      <h2>Classical Test Theory Model</h2>
+    </hgroup>
+    <article>
+      $$X = T + E$$
+      <p></p>
+      <ul class="build">
+        <li>Observed Score = True Score + Error</li>
+        <li>SLR: Height = Weight + Residual</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup> 
+      <h2>Variance</h2>
+    </hgroup>
+    <article>
+      $$\frac{\sum(X - \bar{X})^2}{N}$$
+      <p></p>
+      <ul class="build fade">
+        <li>You administer a test and the students get the following grades: 76, 87, 88, 80, 77. Calculate the variance.</li>
+        <li>You administer the same test again to other students and they get the following grades: 107, 78, 78, 94, 77. Do you expect that the variance was greater? Why? </li>
+        </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Partition Observed Score Variance</h2>
+    </hgroup>
+    <article>
+      $$\sigma^2_X = \sigma^2_T + \sigma^2_E$$
+      <ul class="build">
+        <li>Total Observed Variance = True Score Variance + Error Variance</li>
+        <li>True Score Variance is considered to be stable</li>
+        <li class="blue2">How does Error Variance affect the consistency and usefulness of our test?</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What Goes into Error Variance</h2>
+    </hgroup>
+    <article>
+      <center><img src="images/clock.png" class="reflect" alt="Clock" title="Clock" height = "200"></center>
+      <center><img src="images/bird_reading.jpg" class="reflect" alt="Bird" title="Bird" height = "200"></center>
+      <p></p>   
+      <ul class="build">
+        <li class="blue2">Measurement Error</li>
+      </ul>
+      <footer class="source">source: <a href="http://pixabay.com/en/photos/clock/">Clock</a> and <a href="http://fc06.deviantart.net/fs70/f/2012/289">Reading Bird</a></footer>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Measurement Error</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li class="blue2">Random Error</li>
+          <ul class="build">
+            <li>Unpredictable and inconsistent sources of error</li>
+          </ul>
+        <li class="blue2">Systematic Error</li>
+          <ul class="build">
+            <li>Constant and predictable source of error</li>
+          </ul>  
+        <li>Examples?</li>
+        <li>Which poses a bigger threat to a consistent measure?</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Error Sources</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Constructing tests</li>
+        <li>Administering tests</li>
+        <li>Scoring tests</li>
+        <li>Interpreting tests</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Reliability</h2>
+    </hgroup>
+    <article>
+      $$\sigma^2_T / \sigma^2_X$$
+      <ul class="build">
+        <li>Proportion of observed variance attributed to true variance</li>
+        <li class="blue2">What does it mean?</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter" >
+      <center><img src="images/darts.gif" alt="Dart" title="Dart" height = "400">
+      <footer class="source">source:<a href="http://giphy.com/gifs/cheezburger-fail-QINL0oJPaluvK">Giphy</a></footer>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Types of Reliability</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Test-Retest</li>
+          <ul class="build">
+            <li class="green2">Coefficient of stability</li>
+          </ul>
+        <li>Parallel Forms</li>
+          <ul class="build">
+            <li class="green2">Coefficient of equivalence</li>
+            <li class="green2">Parallel forms reliability</li>
+          </ul>
+          <li>Alternate Forms (constructed Parallel)</li>
+          <ul class="build">
+            <li class="green2">Alternate forms reliability</li>
+          </ul>
+          <li class="blue2"> Measures of Internal Consistency</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Different types of associations</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Pearson's product-moment correlation only appropriate when variables are continuous and are interval/ratio scales </li>
+        <li class="blue2">Alternatives when variables are dichotomous either naturally or artifically (assumed to have a continuous underlying scale)</li>
+          <ul class="build">
+              <li><font color="red">Phi coefficient</font>, equivalent to Pearson's correlation but for dichotomous variables</li>
+              <li><font color="red">Polychoric coefficient</font>, an index of association between two artifically ordinal variables</li>
+              <li><font color="red">Tetrachoric coefficient</font>, an index of association between two artifically dichotomized variables </li>
+              <li><font color="red">Point-biserial coefficient</font>, an index of association betweeen a dichotomous and a continous variable </li>
+              <li><font color="red">Biserial coefficient</font>, an index of association betweeen an artificially dichotomous and a continous variable </li>
+              <li><font color="red">Spearman Rank-Order coefficient</font>, an index of association where at least one variable is ordinal</li>
+              <li><font color="red">Kendall's tau</font>, alternative to Spearman</li>
+          </ul>
+      </ul>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup>
+      <h2>Internal consistency</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Measure level of consistency or agreement between items</li>
+        <li>A test is unidimensional, all the items measure the same latent construct</li>
+        <li></li>
+        <li class="blue2">The more items measure just one construct, the higher the inter-item consistency </li>
+        <li class="red2"> Is it always possible or desirable to have a test that measures just one thing?</li>
+      </ul>
+    </article>
+  </slide>  
+
+  <slide>
+    <hgroup> 
+      <h2>Split-Half Reliability</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li class="blue2">Obtained by correlating two pairs of scores from equivalent halves of a single test</li>
+        <li>"Creating two equivalent forms of a test"</li>
+        <li>What are the steps to calculate this?</li>
+        <li>How might we consider making splits?</li>
+        <li>What should we be careful of?</li>
+      </ul>
+    </article>
+  </slide>
+
+<slide>
+    <hgroup> 
+      <h2>Corrections</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li class="red2">Why do we need a correction?</li>
+          <ul class="build">
+            <li class="blue2">Correlation is affected by measurement error</li>
+            <li class="blue2">Correlation is affected by range restriction</li>
+          </ul>
+        <li>All things considered, which test would be more reliable?</li>
+          <ul>
+            <li>Test A: 5 items or Test B: 10 items?</li>  
+            <li>Tests A and B: 7 items each?</li>
+            <li class="blue2">Reliability is affected by test length</li>
+            
+          </ul>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup> 
+      <h2>Spearman-Brown Correction</h2>
+    </hgroup>
+    <article>
+      $$r_{SB} = \frac{Nr}{1 + (N - 1)r} $$
+      <p></p>
+      <ul class="build">
+        <li>r is the correlation of the original two splits</li>
+        <li>N is the number of "tests", i.e. the factor by which the test is increased</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Uses of Spearman-Brown</h2>
+    </hgroup>
+    <article>
+      $$N = \frac{r_{SB}(1 - r)}{r(1 - r_{SB})}$$
+      <ul class="build">
+          <li>Determine length of test (add or delete items)</li>
+          <li class="blue2">Test modification</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Working with Spearman-Brown</h2>
+    </hgroup>
+    <article>
+      Consider the following Scenarios
+      <table>
+      <col width="100">
+      <col width="100">
+      <col width="100">
+        <tr>
+          <th>N</th><th>r</th><th>SB's r</th>
+        </tr>
+        <tr>
+          <td>2</td><td>.8</td><td></td>
+        </tr>
+        <tr>
+          <td>3</td><td>.8</td><td></td>
+        </tr>
+        <tr>
+          <td>3</td><td>.6</td><td></td>
+        </tr>
+        <tr>
+          <td></td><td>.6</td><td>.8</td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+
+<slide>
+  <hgroup>
+    <h2>Spearman Brown in <code>R</code></h2>
+  </hgroup>
+  <article>
+      <pre class="prettyprint" data-lang="r">
+      # Install and load the package
+      install.packages("CTT")
+      library("CTT")
+
+      # old relibility is 0.6, if the measure is lengthened
+      # by a factor of 2, the relibility of new test is:
+      spearman.brown(0.6, 2,"n")
+
+      # old relibility is 0.5, if we want a new measure to
+      # be 0.8, the new test length is:
+      spearman.brown(0.5, 0.8, "r")
+      </pre>
+  </article>
+  </slide>
+
+  <slide>
+    <hgroup> 
+      <h2>Kuder-Richardson 20</h2>
+    </hgroup>
+    <article>
+      $$r_{KR} = \frac{k}{k-1}\left(1 - \frac{\sum pq}{\sigma^2}\right) $$
+      <p></p>
+      <ul class="build">
+        <li>De facto statistic for dichotomously scored items</li>
+        <li class="blue2">KR-20 typically more conservative than split-half</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup> 
+      <h2>Caclulating KR-20</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>LSAT, Section VI - The Law School Admissions Test</li>
+        <li><a href="http://cddesja.github.io/classes/e411prma2015-1/lecture3/data/lecture3.R">R script</a></li>
+        <li><a href="http://cddesja.github.io/classes/e411prma2015-1/lecture3/data/lsat.csv">LSAT data</a></li>
+      </ul>    
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Coefficient alpha</h2>
+    </hgroup>
+    <article>
+      $$r_{\alpha} = \left(\frac{k}{k - 1}\right)\left(1 - \frac{\sum \sigma_i^2}{\sigma^2}\right)$$
+      <ul class = "build">
+        <li>May be conceptualized as the mean of all possible split-halves</li>
+        <li>Can use on ordinal scales or scales that aren't scored dichtomously</li>
+        <li>Ranges from 0 to 1</li>
+        <li>Want higher values for making high-stakes decisions and lower values OK for research</li>
+        <li>This is an overly used statistic with problems <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2792363/"> (Sijtsma, 2009)</a></li>
+        <li class="blue2">Always consider reporting 95% confidence intervals!</li>
+        <li class="blue2">Alternative proportional distance, doesn't depend on number of items on instrument</li>
+      </ul>
+    </article>
+  </slide>
+
+<slide>
+  <hgroup>
+    <h2>Inter-rater reliability</h2>
+  </hgroup>
+  <article>
+    <ul class="build">
+      <li>Two raters measure the same behavior</li>
+      <li>For example: Number of aggressive behaviors</li>
+      <li>Degree to which these raters report the same incidence of aggressive behaviors is a measure of reliablity</li>
+      <li class="blue2">Correlate scores from raters</li>
+      <li class="red2"> Test scores have reliability NOT test</li>
+    </ul>
+  </article>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>IRR: Example</h2>
+  </hgroup>
+  <article>
+  Two parents are administered the CBCL (an instrument to identify problem behaviors in children) on their four children. How well do their scores for the section Aggressive Behavior agree (i.e. what is their inter-rater reliability)?
+    <table>
+      <col width="100">
+      <col width="100">
+      <col width="100">
+        <tr>
+          <th>Child</th><th>Parent 1</th><th>Parent 2</th>
+        </tr>
+        <tr>
+          <td>1</td><td>5.5</td><td>6.0</td>
+        </tr>
+        <tr>
+          <td>2</td><td>5.2</td><td>5.2</td>
+        </tr>
+        <tr>
+          <td>3</td><td>4.6</td><td>4.0</td>
+        </tr>
+        <tr>
+          <td>4</td><td>6.6</td><td>5.6</td>
+        </tr>
+      </table>
+
+  </article>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>Test characteristics on reliability</h2>
+  </hgroup>
+  <article>
+    <ul class="build">
+      <li>More homogeneous, higher reliability</li>
+      <li>More static the characteristic, higher reliability</li>
+      <li>Restriction range, lower reliability</li>
+      <li>Power vs. speed test</li>
+        <ul class="build">
+          <li>If speed, reliability estimates may be too high</li>
+          <li>Test-retest, alternate-forms, or split halves from two independently timed half tests</li>
+        </ul>
+      <li>Criterion-referenced, lower variability, lower reliability</li>
+    </ul>
+  </article>
+</slide>
+
+<slide>
+<hgroup>
+  <h2>Calculating True Score</h2>
+</hgroup>
+<article>
+  <ul class="build">
+    <li>Anna takes 3 tests (parallel forms) in math</li>
+    <li>She gets an 8, 7, and 7.5</li>
+    <li>What should we estimate as her true score/ability in math?</li>
+    <li class="red2">Do you think that score is her score?</li>
+  </ul>
+</article>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>Quantifying the Uncertainty - SEM</h2>
+  </hgroup>
+  <article>
+  $$\sigma_{SEM} = \sigma_X\sqrt{1 - r_{xx}} $$ 
+  <ul class="build">
+    <li>Standard Error of Measurement = Standard Deviation of Observed Scores * Square Root of 1 - Reliability Coefficient</li>
+    <li>Can use this to create confidence intervals and using normality assumption of scores on large number of tests</li>
+    <li>Determine plausible values for a person's true score</li>
+  </ul>
+  </article>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>SEM: Example </h2>
+  </hgroup>
+  <article>
+  <ul class="build">
+    <li>A math test is administered. The test scores have a reliability coefficient of 0.80 and a standard deviation of 0.5</li>
+    <li>What is the standard error of measurement?</li>
+    <li>If Anna scored a 7.5, what range of values can we be 95% confident that her true score lies between? 99% confident?</li>
+  </ul>
+  </article>
+</slide>
+
+
+
+
+<slide>
+  <hgroup>
+    <h2>Standard Error of the Difference</h2>
+  </hgroup>
+  <article>
+    $$\sigma_D = \sqrt{\sigma_{SEM_1} + \sigma_{SEM_2}} $$
+    $$\sigma_D = \sigma\sqrt{2 - r_1 - r_2} $$ 
+  </article>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>SED: Example</h2>
+  </hgroup>
+  <article>
+    <li>Sigrun takes the same test as Anna and scores a 6.5. Did Anna perform significantly better on the test?</li>
+  </article>
+</slide>
+
+
+<slide>
+    <hgroup>
+      <h2>Next time</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Quiz and validity (chapter 6)</li>
+      </ul>
+    </article>
+  </slide>
+
+
+
+<slide class="backdrop"></slide>
+</slides>
+
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

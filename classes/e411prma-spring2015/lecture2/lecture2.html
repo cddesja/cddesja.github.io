@@ -1,0 +1,523 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default_hr.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+  <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+<!-- logo slide
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo.png"></span>
+    </article>
+  </slide> -->
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/default_clear.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Today</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Course Overview</li>
+      <!-- subbullets  <li>Title capitalization is title case
+          <ul>
+            <li>Subtitle capitalization is title case</li>
+          </ul>
+        </li> -->
+        <li>Statistical review (continued)</li>
+        <li>Brief history of testing</li>
+        <li>Norms and sampling</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>About the Course</h2>
+    </hgroup>
+    <article>
+      <ul class="build fade">
+      <li> <a href="https://myschool.ru.is/myschool/?Page=Exe&ID=2.10&View=&ViewMode=0&FagID=27322">E-411-PRMA Course Website</a>
+      <li> Cohen, R. J., Swerdlik, M. E., &amp; Sturman, E. D. (2013). <i>Psychological testing and assessment: An introduction to tests and measurement</i>. New York, NY: McGraw-Hill</li>
+      <li> Website readings on item response theory and generalizability theory</li>
+      <li> Will be using <a href="http://www.r-project.org"><code>R</code></a> in class and on assignments</li>
+      <li> <a href="http://kennslubanki.hi.is/tolfraedi">http://kennslubanki.hi.is/tolfraedi</a></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+    <iframe width="420" height="315" src = "http://www.youtube.com/embed/ogV9GfWuWUQ"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+    <iframe width="420" height="315" src = "http://www.youtube.com/embed/kBCt1G-0Ezo"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>First-Day Test</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Thoughts?</li>
+        <li>What was I measuring?</li>
+        <li>Pros/cons of the tests?</li>
+        <li>Will return to this test throughout the course</li>
+        </ul>    
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Testing and measurement</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>What is measurement?</li>
+          <ul class="build">
+            <li>Assignment of numerical values based on a set of rules</li>
+          </ul>
+        <li>What is a test?</li>
+          <ul class="build">
+            <li>Instrument used to measure</li>
+          </ul>  
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+    <h2>Statistical Review</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Scales - Nominal, ordinal, interval, and ratio</li>
+        <li> An item measuring ... </li>
+          <ul class="build">
+          <li>Temperature (in Celsius)</li>
+          <li>Temperature (in Kelvin)</li>
+          <li>Speed</li>
+          <li>Gender</li>
+          <li>Happiness</li>
+          </ul>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Probability distribution, Skewness, kurtosis</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>What is a probability distribution</li>
+          <ul class="build">  
+            <li>Assigns a probability, likeliness of occurence, of a score of all possible scores</li>
+            <li>May be parametric or non-parametric</li>
+            <li>Normal</li>
+          </ul>
+        <li>What skew might you expect these outcomes to look like?</li>
+          <ul class="build">
+            <li>Reaction time in a psychological experiment</li>
+            <li>Number of children in a family</li>
+            <li>Scores on an easy test</li>
+            <li>Height in Reykjavík</li> 
+          </ul>
+        <li>Platykurtic, mesokurtic, and leptokurtic</li>
+        <li class="red">Plot your data, rely less on statistics!</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <iframe src="http://130.208.71.121:3838/e411prma/normal_applet"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Homework Problems</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>GRE exam: Mean = 500, SD = 100, and 1000 participants</li>
+        <li> Jarl gets a 650 on the GRE, about how many students scored below him?</li>
+        <li> 330 students score below Þöll, what was her score?</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Letting <code>R do the work</code></h2>
+    </hgroup>
+    <article>
+        <pre class="prettyprint" data-lang="r">
+        pnorm(650, mean = 500, sd = 100) * 1000
+        <b># 933.1928</b>
+        qnorm(330/1000, mean = 500, sd = 150)
+        <b># 456.0087</b>
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Percentiles</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li> 330 students score below Þöll, what <font color="blue">percentile</font> is she in?</li>
+        <li> Percentiles represent a reasonably simple and intuitive way to classify scores relative to other test takers</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup> 
+    <h2>Correlation</h2>
+    </hgroup>
+    <article>
+      $$ r = \frac{\sum (X - \bar{X})(Y - \bar{Y})}{\sqrt{\sum(X - \bar{X})^2 \sum(Y - \bar{Y})^2}}$$ 
+    </article>   
+  </slide>
+
+
+<slide>
+    <hgroup>
+      <h2>Calculating correlations</h2>
+    </hgroup>
+    <article class="smaller">
+      <table>
+      <col width="100">
+      <col width="100">
+      <col width="100">
+        <tr>
+          <th></th><th>X</th><th>Y</th>
+        </tr>
+        <tr>
+          <td></td><td>5</td><td>6</td>
+        </tr>
+        <tr>
+          <td></td><td>3</td><td>0</td>
+        </tr>
+        <tr>
+          <td></td><td>1</td><td>0</td>
+        </tr>
+        <tr>
+          <td>Mean</td><td>3</td><td>2</td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Calculating the correlation in <code>R</code></h2>
+    </hgroup>
+    <article>
+        <pre class="prettyprint" data-lang="r">
+        # Assign X the values of 5, 3, 1 and Y the values of 6, 0, and 0
+        x <- c(5, 3, 1)
+        y <- c(6, 0, 0)
+        # Calculate the correlation
+        cor(x , y)
+        <b># 0.8660254</b>
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <iframe src="http://130.208.71.121:3838/e411prma/correlation_applet"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+  <hgroup>
+    <h2>Simple linear regression</h2>
+  </hgroup>
+  <article>
+    <ul>
+      <li>Pretend we are interested in predicting height given someones weight</li>
+      <li>We might consider a linear regression model</li>
+    </ul>
+$$Height = \beta_0 + \beta_1*Weight$$
+<div class="centered" style="margin-top:2em">
+<font color="red">How would we know if this is appropriate?</font>
+</div>
+  </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+    </hgroup>
+    <article class="flexbox vcenter">
+     <img src="images/weight.png" class="reflect" alt="Description" title="Description">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Model Summary</h2>
+    </hgroup>
+    <article>
+      <table>
+        <tr>
+          <th>Coefficient</th><td>Estimate</td>
+        </tr>
+        <tr>
+          <th>Intercept</th><td>25.723456</td>
+        </tr>
+        <tr>
+          <th>Slope</th><td>0.287249</td>
+        </tr>
+        </table>
+        $$\hat{Height} = 25.723456 + 0.287249*Weight$$
+
+        <div class="centered" style="margin-top:2em">
+        How does this relate to the correlation?
+        </div>
+    </article>
+  </slide>
+
+  <slide>
+  <hgroup>
+    <h2>Slope and the correlation</h2>
+  </hgroup>
+  <article>
+    <ul>
+      <li>There is a relationship between the estimated slope and the correlation between two variables in a SLR</li>
+    </ul>
+    $$ r = b\frac{SD_X}{SD_Y} $$
+    <ul class="build">
+      <li>What is r if b is 0.287249, the SD of weight is 15.49869 and the SD of height is 4.472136?</li>
+      <li>Does that parallel what you thought based on the plot?</li>
+      <li>What would b become if r = 0.4?</li>
+    </ul>
+    
+  </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>History and timeline of test development</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>2200 BCE, Chinese believed to use testing for determining who would get governmental jobs</li>
+        <li>Greek and Romans categorized individuals based on personality type ("blood" or "phlegm")</li>
+        <li>Francis Galton's classification based on "natural gift" (i.e. eugenics)</li>
+          <ul class="build">
+            <li>Contributed to development of questionnaries, rating scales, and self-report inventories</li>
+          </ul>
+        <li>Wilhelm Wundt's laboratory and his focus on "standardization"</li>
+        <ul class="build">
+            <li>James Cattell's mental tests</li>
+            <li>Charles Spearman - reliability and factor analysis</li>
+          </ul>
+        
+      </ul>
+    </article>
+  </slide>
+
+    <slide>
+    <hgroup>
+      <h2>Testing in the 20th Century</h2>
+    </hgroup>
+    <article>
+      <ul class="build fade">
+        <li>1905, Binet and Simon publish a test measuring intelligence in mental retarded school children in Paris</li>
+        <li>1939, Wechsler publishes a test to measure intelligence in adults (would become WAIS)</li>
+        <li>Group intelligence test administered by the US military during WWI and WWII</li>
+        <li>WWI personality tests used to screen recruits</li>
+    </article>
+  </slide>
+
+
+ <slide>
+    <hgroup>
+      <h2>Assumptions of Psychological Testing</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Psychological traits and states exist</li>
+        <li>Psychological traits and states can be measured</li>
+        <li>Behavior on tests predicts non-test behavior</li>
+        <li>Measurement error is part of the process</li>
+        <li>Test can be fair</li>
+        <li>Test can benefit society</li>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup>
+      <h2>Norm-Referenced Testing</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Individuals scores are relative only to some reference group</li>
+        <li>This group should represent the entire pool of test takers for the tested construct</li>
+        <li>Collectively, this group is known as a <font color="blue">normative sample</font> and data from them are the <font color="blue">norms</font></li>
+        <li>Understanding the normative sample is very important</li>
+        </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Sampling: PTSD in Iceland</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+     <img src="images/iceland.svg"  height="500" width="600" class="reflect" alt="Description" title="Description">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Sampling Techniques</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Simple random sample</li>
+        <li>Stratified random sample</li>
+        <li>Cluster random sample</li>
+        <li class="red">Purposive sample</li>
+        <li class="red">Convenience sample</li>
+        </ul>
+    </article>
+  </slide>
+  
+    <slide>
+    <hgroup>
+      <h2>Different Norms</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Developmental Norms</li>
+        <ul class="build">
+          <li>Age Norms</li>
+            <ul class="build">
+              <li>A 6 year old performs at the level of a 10 year old</li>
+              <li class="red">This is on this material only though!</li>
+            </ul>
+        <li>Grade Norms</li>
+          <ul class="build">
+              <li>School year typically 10 months in the US (and Iceland?)</li>
+              <li>A 4th grader is performing at the level of a 5th grader in third month</li>
+              <li class="red">This is on this material only though!</li>
+            </ul>
+        </ul>
+        <li>National Norms, national representative</li>
+            <ul class="build">
+              <li>Anchor norms enable two tests to be compared</li>
+              <li>In USA, students could take SAT or ACT for admission to college</li>             
+            </ul>
+        </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Fixed Reference and Criterion-Related</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Fixed reference group scores are used as the basis for calculation of future administrations of the test</li>
+        <li>SAT does this through using anchor items and equating</li>
+        <li>Criterion-referenced, evaluate a score with reference to a set criteria or standard NOT other test takers</li>
+        </ul>
+    </article>
+  </slide>
+
+    <slide>
+    <hgroup>
+      <h2>Question</h2>
+    </hgroup>
+    <article>
+    <ul class="build">
+        <li> How would you score the grades in a class room? </li>
+        <li> What do you think is the fairest way?</li>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Next time</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Please read the chapter on reliability (chapter 5)</li>
+        <li>Please watch the RStudio videos</li>
+      </ul>
+    </article>
+  </slide>
+
+
+
+<slide class="backdrop"></slide>
+</slides>
+
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

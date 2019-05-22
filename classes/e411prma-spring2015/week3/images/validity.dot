@@ -1,0 +1,16 @@
+digraph G {
+sep="+25,25";
+CO -> CR [dir = both];
+CE -> CR [dir = both];
+CE -> CO [dir = both];
+
+CE[label="Content Validity"]
+CO[label="Construct Validity"]
+CR[label="Criterion-Related Validity"]
+
+
+{rank = same; CE; CR}
+
+/* Forces bias to the bottom of the figure */
+{rank = max;}
+}

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<style>
+
+@import url(http://fonts.googleapis.com/css?family=PT+Serif|PT+Serif:b|PT+Serif:i);
+
+section {
+  background: #000;
+  color: #fff;
+  padding: 2em;
+  font-family: "PT Serif", Baskerville, Georgia;
+}
+
+#follow {
+  background: none;
+}
+
+.grey {
+  color: #777;
+}
+
+.orange {
+	color: orange;
+}
+
+a:link,
+a:visited {
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+</style>
+
+
+<!-- load the highlight -->
+<link rel="stylesheet" href="highlight/styles/monokai_sublime.css">
+<script src="highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<section style="text-align:center;padding-top:5em;">
+  <p class="orange" style="font-size:120%"><strong>Exploratory Data Analysis (EDA)</strong><br> using R</p>
+  <p class="grey">Christopher David Desjardins
+</section>
+
+<section style="padding:5em 9em;">
+  <p><span class="grey">Examine integrity of data
+  <br> Check for problems</span>
+    <br>Explore and identify relationships between variables
+    <br>Explore the feasibility of the research questions
+    <br>Identify data needs
+    <br><span class="orange">Identify what is important and worth pursuing
+    <br>Make the client :) or :( </span>
+</section>
+
+<section style="text-align:center;padding:4em 9em;">
+	<p> The tools (some of ...)
+	<br>
+	<br><a href="https://github.com/smbache/magrittr">magrittr</a>
+	<br><a href="https://github.com/hadley/dplyr">dplyr</a>
+	<br><a href="https://github.com/hadley/ggplot2">ggplot2</a>
+	<br><a href="http://shiny.rstudio.com/">shiny</a> <p>
+</section>
+
+
+<section style="padding:3em;">
+  <pre><code class="lang-R" style="monokai_sublime">
+## Install dplyr, ggplot2, and shiny
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("shiny")
+
+## Load the libraries
+library("dplyr")
+library("ggplot2")
+library("shiny")
+  </code></pre>
+</section>
+
+<section style="padding:5em 8em;">
+  <p>We're going to explore the <a href="http://seanlahman.com/">Lahman</a> data set
+    <br> Lots of different data sets at the <strong>team</strong> and <strong>player</strong> level
+    <br> We'll explore the <em>Teams</em> data set</p>
+    <p class="grey">No, I won't teach you baseball</p>
+</section>
+
+<section style="padding:5em;">
+	<p> If you want to follow along </p>
+	<pre><code class="lang-R">
+install.packages("Lahman")  
+## wait and wait; these are large dbs
+
+library("Lahman")
+	</code>
+</section>
+
+<section id="follow" style="padding-top:5em;background:url(images/baseball.jpg);background-size:cover;">
+  <p style="text-align:center;color:#fff;font-size:200%;line-height:1.35em;">What are the best predictors of wins?</p>
+</section>
+
+<section style="text-align:center;padding:4em;font-size:200%;">
+    <a href="https://gist.github.com/cddesja/28e426bfe07a6a27f02d">EDA gist for R</a>
+</section>
+
+
+<section style="text-align:center;padding:3em 1em;;font-size:150%;">
+  <p>What should we do first?
+  <br>
+  <br>How might we proceed?</p>
+</section>
+
+<section style="padding:2em 2em;">
+  <p class="orange">Attempt to understand the structure of the data</p>
+ 	<pre><code style="font-size:60%" class="lang-R">names(Teams)
+ [1] "yearID"  "lgID"    "teamID"  "franchID"  "divID"   "Rank"    "G"       "Ghome"   "W"      
+[10] "L"       "DivWin"  "WCWin"   "LgWin"   "WSWin"   "R"       "AB"      "H"       "X2B"    
+[19] "X3B"     "HR"      "BB"      "SO"      "SB"      "CS"      "HBP"     "SF"      "RA"     
+[28] "ER"      "ERA"     "CG"      "SHO"     "SV"      "IPouts"  "HA"      "HRA"     "BBA"    
+[37] "SOA"     "E"       "DP"      "FP"      "name"    "park"    "attendance"     "BPF"     "PPF"    
+[46] "teamIDBR"       "teamIDlahman45" "teamIDretro" 
+ 	</code></pre>
+</section>
+
+<section style="padding:2em 2em;">
+<pre><code style="font-size:60%" class="lang-R">str(Teams)
+'data.frame':	2775 obs. of  48 variables:
+ $ yearID        : int  1871 1871 1871 1871 1871 1871 1871 1871 1871 1872 ...
+ $ lgID          : Factor w/ 7 levels "AA","AL","FL",..: 4 4 4 4 4 4 4 4 4 4 ...
+ $ teamID        : Factor w/ 149 levels "ALT","ANA","ARI",..: 24 31 39 56 90 97 111 136 142 8 ...
+ $ franchID      : Factor w/ 120 levels "ALT","ANA","ARI",..: 13 36 25 56 70 85 91 109 77 9 ...
+ ...
+ $ teamIDBR      : chr  "BOS" "CHI" "CLE" "KEK" ...
+ $ teamIDlahman45: chr  "BS1" "CH1" "CL1" "FW1" ...
+ $ teamIDretro   : chr  "BS1" "CH1" "CL1" "FW1" ...
+</code></pre>
+</section>
+
+<section style="text-align:center;padding:1em 1em;">
+<p>Five stat summary</p>
+<table class='gmisc_table' style='border-collapse: collapse; font-size:60%; margin-left:auto; margin-right:auto;' >
+<thead>
+<tr>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey;'> </th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Min</th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Q1</th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Med</th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Mean</th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Q3</th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: left;'>W</td>
+<td style='text-align: center;'>37</td>
+<td style='text-align: center;'>71</td>
+<td style='text-align: center;'>80</td>
+<td style='text-align: center;'>79.4035532994924</td>
+<td style='text-align: center;'>89</td>
+<td style='text-align: center;'>116</td>
+</tr>
+<tr>
+<td style='text-align: left;'>R</td>
+<td style='text-align: center;'>329</td>
+<td style='text-align: center;'>639</td>
+<td style='text-align: center;'>699.5</td>
+<td style='text-align: center;'>699.745558375635</td>
+<td style='text-align: center;'>762.25</td>
+<td style='text-align: center;'>1009</td>
+</tr>
+<tr>
+<td style='text-align: left;'>AB</td>
+<td style='text-align: center;'>3493</td>
+<td style='text-align: center;'>5410</td>
+<td style='text-align: center;'>5498</td>
+<td style='text-align: center;'>5420.32550761421</td>
+<td style='text-align: center;'>5566</td>
+<td style='text-align: center;'>5781</td>
+</tr>
+<tr>
+<td style='text-align: left;'>H</td>
+<td style='text-align: center;'>797</td>
+<td style='text-align: center;'>1349.75</td>
+<td style='text-align: center;'>1411</td>
+<td style='text-align: center;'>1403.91941624365</td>
+<td style='text-align: center;'>1476</td>
+<td style='text-align: center;'>1684</td>
+</tr>
+<tr>
+<td style='text-align: left;'>X2B</td>
+<td style='text-align: center;'>119</td>
+<td style='text-align: center;'>215</td>
+<td style='text-align: center;'>249</td>
+<td style='text-align: center;'>249.119923857868</td>
+<td style='text-align: center;'>281</td>
+<td style='text-align: center;'>376</td>
+</tr>
+<tr>
+<td style='text-align: left;'>X3B</td>
+<td style='text-align: center;'>11</td>
+<td style='text-align: center;'>27</td>
+<td style='text-align: center;'>34</td>
+<td style='text-align: center;'>34.6414974619289</td>
+<td style='text-align: center;'>41</td>
+<td style='text-align: center;'>79</td>
+</tr>
+<tr>
+<td style='text-align: left;'>HR</td>
+<td style='text-align: center;'>32</td>
+<td style='text-align: center;'>113</td>
+<td style='text-align: center;'>140</td>
+<td style='text-align: center;'>142.058375634518</td>
+<td style='text-align: center;'>167</td>
+<td style='text-align: center;'>264</td>
+</tr>
+<tr>
+<td style='text-align: left;'>BB</td>
+<td style='text-align: center;'>275</td>
+<td style='text-align: center;'>474</td>
+<td style='text-align: center;'>521</td>
+<td style='text-align: center;'>523.487944162437</td>
+<td style='text-align: center;'>572</td>
+<td style='text-align: center;'>775</td>
+</tr>
+<tr>
+<td style='text-align: left;'>SO</td>
+<td style='text-align: center;'>379</td>
+<td style='text-align: center;'>816</td>
+<td style='text-align: center;'>925</td>
+<td style='text-align: center;'>931.015228426396</td>
+<td style='text-align: center;'>1054</td>
+<td style='text-align: center;'>1535</td>
+</tr>
+<tr>
+<td style='text-align: left;'>SB</td>
+<td style='text-align: center;'>13</td>
+<td style='text-align: center;'>65</td>
+<td style='text-align: center;'>91</td>
+<td style='text-align: center;'>95.3362944162437</td>
+<td style='text-align: center;'>122</td>
+<td style='text-align: center;'>341</td>
+</tr> 
+</tbody>
+</table>
+</section>
+
+<section style="text-align:center;padding:3em 1em;font-size:150%;">
+  <p>If the data look sensible (i.e. there aren't any obvious data integrity issues)
+  <br>
+  <br>Then what?</p>
+</section>
+
+
+
+<section style="text-align:center;padding:.35em;">
+  <p>Explore bivariate associations</p>
+<table class='gmisc_table' style='border-collapse: collapse; margin-left:auto; margin-right:auto; font-size:100%' >
+<thead>
+<tr>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Predictor</th>
+<th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Wins</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align: center;'>RA</td>
+<td style='text-align: center;'>-0.616065865960237</td>
+</tr>
+<tr>
+<td style='text-align: center;'>ERA</td>
+<td style='text-align: center;'>-0.611445802765869</td>
+</tr>
+<tr>
+<td style='text-align: center;'>ER</td>
+<td style='text-align: center;'>-0.59861680447287</td>
+</tr>
+<tr>
+<td style='text-align: center;'>HA</td>
+<td style='text-align: center;'>-0.512781920911115</td>
+</tr>
+<tr>
+<td style='text-align: center;'>BBA</td>
+<td style='text-align: center;'>-0.444945137909955</td>
+</tr>
+<tr>
+<td style='text-align: center;'>BB</td>
+<td style='text-align: center;'>0.401595484670558</td>
+</tr>
+<tr>
+<td style='text-align: center;'>SHO</td>
+<td style='text-align: center;'>0.465124381461136</td>
+</tr>
+<tr>
+<td style='text-align: center;'>Attendance</td>
+<td style='text-align: center;'>0.4764013801237</td>
+</tr>
+<tr>
+<td style='text-align: center;'>R</td>
+<td style='text-align: center;'>0.524785625913186</td>
+</tr>
+<tr>
+<td style='text-align: center;'>SV</td>
+<td style='text-align: center;'>0.655956165173875</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section style="text-align:center;padding:1em;font-size:100%">
+    <img src="images/corplot.png"/>
+</section>
+
+
+<section style="text-align:center;padding:0em;font-size:100%;">
+<p>Bivariate plots</p>
+<object data=http://130.208.71.121:3838/stat_consult/bivar/ width="800" height="550"> <embed src=http://130.208.71.121:3838/stat_consult/bivar/ width="800" height="550"> </embed> http://130.208.71.121:3838/stat_consult/bivar/ </object>
+</section>
+
+<section style="text-align:center;padding:1em;font-size:100%;">
+    <p> Marginal plot of Wins</p>
+    <br>
+    <img src="images/win_marg.png"/>
+</section>
+
+<section style="text-align:center;padding:1em;font-size:100%;">
+    <p> Box and whisker plot: Wins vs. Attendance</p>
+    <img src="images/box_attend.png"/>
+</section>
+
+
+<section style="text-align:center;padding:.35em;">
+  <p>Data reduction</p>
+  <img src = "images/pca.png"/>
+</section>
+
+
+<section style="padding:5em 9em;">
+  <p><span class="grey">Lots of other techniques</span>
+  <br> k-means clustering
+    <br>facet plots
+    <br>added-variable plot
+    <br>factor analysis</p>
+</section>
+
+<section style="text-align:center;padding:3em;font-size:200%;">
+    <p> Up next: Inference?
+    <br> <span class="grey">Train, Test</span></p>
+</section>
+
+<section style="text-align:center;padding:4em;font-size:150%;">
+  <p>Next time
+  <br>
+  <a href="http://www.stat.ncsu.edu/people/fuentes/courses/st810a/gelman.pdf">Gelman, Pasarica, and Dodhia (2002)</a>
+  <br>
+  Bring a table</p>
+</section>
+
+
+<!-- <section id="follow" style="padding-top:5em;background:url(sky.jpg);background-size:cover;">
+  <p style="text-align:center;color:#000;font-size:200%;line-height:1.35em;">INSPIRATIONAL IMAGE<br>ACCOMPANIED BY<br>INSIGHTFUL COMMENTARY
+  <p id="follow-anchor" style="position:fixed;text-indent:-1.25em;">&larr; When this bar reaches the top,<br>the next slide will fade in.
+</section>
+
+<section style="text-align:center;padding-top:5em;">
+  <p>If you resize the window,
+    <br>slide content will scale up or down
+    <br>to fit automatically.
+</section>
+
+
+<section style="padding:5em 13em;">
+  <p>Stack is made by <a href="http://bost.ocks.org/mike/" rel="author">Mike Bostock</a>
+    <br>and is available on <a href="https://github.com/mbostock/stack">GitHub</a>
+    <br>under the <a href="https://github.com/mbostock/stack/blob/gh-pages/LICENSE">BSD license</a>.
+  <p><a style="color:#777;text-decoration:none;" href="https://github.com/mbostock/stack">View source to get started.</a>
+</section> -->
+
+<script src="d3.v3.min.js"></script>
+<script src="stack.v1.min.js"></script>
+<script>
+
+var mystack = stack()
+    .on("activate", activate)
+    .on("deactivate", deactivate);
+
+var section = d3.selectAll("section"),
+    follow = d3.select("#follow"),
+    followAnchor = d3.select("#follow-anchor"),
+    lorenz = d3.select("#lorenz"),
+    followIndex = section[0].indexOf(follow.node()),
+    lorenzIndex = section[0].indexOf(lorenz.node());
+
+function refollow() {
+  followAnchor.style("top", (followIndex + (1 - mystack.scrollRatio()) / 2 - d3.event.offset) * 100 + "%");
+}
+
+function activate(d, i) {
+  if (i === followIndex) mystack.on("scroll.follow", refollow);
+  if (i === lorenzIndex) startLorenz();
+}
+
+function deactivate(d, i) {
+  if (i === followIndex) mystack.on("scroll.follow", null);
+  if (i === lorenzIndex) stopLorenz();
+}
+
+var lorenzInterval;
+
+function startLorenz() {
+  var δτ = 0.003,
+      ρ = 28,
+      σ = 10,
+      β = 8 / 3,
+      x = .5,
+      y = .5,
+      z = 10,
+      n = 30;
+
+  var width = 1280,
+      height = 720;
+
+  var canvas = d3.select("canvas")
+      .style("position", "absolute")
+      .style("top", 0)
+      .style("left", 0)
+      .style("width", "100%")
+      .style("height", "100%")
+      .attr("width", width)
+      .attr("height", height);
+
+  var color = d3.scale.linear()
+      .domain([0, 20, 30, 50])
+      .range(["yellow", "orange", "brown", "purple"])
+      .interpolate(d3.interpolateHcl);
+
+  var context = canvas.node().getContext("2d");
+
+  context.lineWidth = .2;
+  context.fillStyle = "rgba(0,0,0,.03)";
+
+  d3.timer(function() {
+    context.save();
+    context.globalCompositeOperation = "lighter";
+    context.translate(width / 2, height / 2);
+    context.scale(12, 14);
+    context.rotate(30);
+    for (var i = 0; i < n; ++i) {
+      context.strokeStyle = color(z);
+      context.beginPath();
+      context.moveTo(x, y);
+      x += δτ * σ * (y - x);
+      y += δτ * (x * (ρ - z) - y);
+      z += δτ * (x * y - β * z);
+      context.lineTo(x, y);
+      context.stroke();
+    }
+    context.restore();
+    return !lorenzInterval;
+  });
+
+  lorenzInterval = setInterval(function() {
+    context.fillRect(0, 0, width, height);
+  }, 100);
+}
+
+function stopLorenz() {
+  lorenzInterval = clearInterval(lorenzInterval);
+}
+
+</script>

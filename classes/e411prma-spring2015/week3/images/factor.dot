@@ -1,0 +1,18 @@
+digraph G {
+sep="+25,25";
+F -> L [label = ".7"];
+F -> AN [label = ".75"];
+F -> SC [label = "-.6"];
+F -> N [label = ".85"];
+
+F[label="Factor"]
+L[label="Loneliness"]
+AN[label="Anxiety"]
+SC[label="Social Competence"]
+N[label="Nervousness"]
+
+{rank = same; L; AN, SC, N}
+
+/* Forces bias to the bottom of the figure */
+{rank = max;}
+}
