@@ -453,7 +453,17 @@
   </url>
   
   <url>
+    <loc>https://cddesja.github.io/classes/e411prma-fall2015/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cddesja.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/classes/</loc>
     <priority>0</priority>
   </url>
   
