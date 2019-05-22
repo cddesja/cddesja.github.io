@@ -27,18 +27,6 @@
   </url>
   
   <url>
-    <loc>https://cddesja.github.io/tags/dissonance/</loc>
-    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/tags/eating-disorders/</loc>
-    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cddesja.github.io/authors/eric-stice/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -51,30 +39,12 @@
   </url>
   
   <url>
-    <loc>https://cddesja.github.io/tags/moderators/</loc>
-    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cddesja.github.io/publication/stice_2019/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://cddesja.github.io/tags/obesity/</loc>
-    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cddesja.github.io/authors/paul-rohde/</loc>
-    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/tags/prevention/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -92,6 +62,36 @@
   
   <url>
     <loc>https://cddesja.github.io/tags/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/dissonance/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/eating-disorders/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/moderators/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/obesity/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/prevention/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -126,7 +126,31 @@
   </url>
   
   <url>
-    <loc>https://cddesja.github.io/tags/source-themes/</loc>
+    <loc>https://cddesja.github.io/tags/adjustment/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/childhood/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/cortisol/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/emotion-regulation/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/postinstitutionalized/</loc>
     <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -262,6 +286,12 @@
   <url>
     <loc>https://cddesja.github.io/publication/preprint/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/source-themes/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
