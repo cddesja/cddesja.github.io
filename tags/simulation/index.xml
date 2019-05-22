@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on C. D. Desjardins</title>
-    <link>https://cddesja.github.io/tags/r/</link>
-    <description>Recent content in R on C. D. Desjardins</description>
+    <title>Simulation on C. D. Desjardins</title>
+    <link>https://cddesja.github.io/tags/simulation/</link>
+    <description>Recent content in Simulation on C. D. Desjardins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 May 2019 12:30:00 +0000</lastBuildDate>
     
-	<atom:link href="https://cddesja.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cddesja.github.io/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://cddesja.github.io/talk/power_talk/</guid>
       <description>A talk on statistical power, errors, and effect sizes.</description>
-    </item>
-    
-    <item>
-      <title>Exploring, Visualizing, and Modeling Big Data with R</title>
-      <link>https://cddesja.github.io/talk/big_data/</link>
-      <pubDate>Fri, 05 Apr 2019 08:00:00 +0000</pubDate>
-      
-      <guid>https://cddesja.github.io/talk/big_data/</guid>
-      <description>A workshop on big data with an application to education.</description>
     </item>
     
   </channel>
