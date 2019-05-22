@@ -3,20 +3,84 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://cddesja.github.io/talk/power_talk/</loc>
-    <lastmod>2019-05-01T12:30:00+00:00</lastmod>
+    <loc>https://cddesja.github.io/publication_types/2/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/authors/anna-m.-parenteau/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cddesja.github.io/authors/</loc>
-    <lastmod>2019-05-01T12:30:00+00:00</lastmod>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/authors/bonny-donzella/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cddesja.github.io/</loc>
-    <lastmod>2019-05-01T12:30:00+00:00</lastmod>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/authors/christopher-david-desjardins/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/publication/perry_2019/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/authors/megan-r.-gunnar/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/authors/nicole-b.-perry/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/publication_types/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/publication/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/source-themes/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/talk/power_talk/</loc>
+    <lastmod>2019-05-01T12:30:00+00:00</lastmod>
   </url>
   
   <url>
@@ -55,12 +119,6 @@
   </url>
   
   <url>
-    <loc>https://cddesja.github.io/tags/</loc>
-    <lastmod>2019-05-01T12:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cddesja.github.io/tags/type-i-type-ii-errors/</loc>
     <lastmod>2019-05-01T12:30:00+00:00</lastmod>
     <priority>0</priority>
@@ -83,23 +141,6 @@
   </url>
   
   <url>
-    <loc>https://cddesja.github.io/publication_types/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/publication/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/tags/source-themes/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cddesja.github.io/talk/big_data/</loc>
     <lastmod>2019-04-05T08:00:00+00:00</lastmod>
   </url>
@@ -119,47 +160,6 @@
   <url>
     <loc>https://cddesja.github.io/tags/machine-learning/</loc>
     <lastmod>2019-04-05T08:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/publication_types/2/</loc>
-    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/authors/anna-m.-parenteau/</loc>
-    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/authors/bonny-donzella/</loc>
-    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/authors/christopher-david-desjardins/</loc>
-    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/publication/perry_2019/</loc>
-    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/authors/megan-r.-gunnar/</loc>
-    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/authors/nicole-b.-perry/</loc>
-    <lastmod>2018-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

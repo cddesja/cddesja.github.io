@@ -6,10 +6,19 @@
     <description>Recent content in Source Themes on C. D. Desjardins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cddesja.github.io/tags/source-themes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Emotion regulation and cortisol reactivity during a social evaluative stressor: A study of post‐institutionalized youth</title>
+      <link>https://cddesja.github.io/publication/perry_2019/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cddesja.github.io/publication/perry_2019/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>An example preprint / working paper</title>
@@ -18,15 +27,6 @@
       
       <guid>https://cddesja.github.io/publication/preprint/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.</description>
-    </item>
-    
-    <item>
-      <title>Emotion regulation and cortisol reactivity during a social evaluative stressor: A study of post‐institutionalized youth</title>
-      <link>https://cddesja.github.io/publication/perry_2019/</link>
-      <pubDate>Thu, 10 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://cddesja.github.io/publication/perry_2019/</guid>
-      <description></description>
     </item>
     
     <item>

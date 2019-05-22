@@ -6,10 +6,19 @@
     <description>Recent content in Tags on C. D. Desjardins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 May 2019 12:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cddesja.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Source Themes</title>
+      <link>https://cddesja.github.io/tags/source-themes/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://cddesja.github.io/tags/source-themes/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Effect Size</title>
@@ -53,15 +62,6 @@
       <pubDate>Wed, 01 May 2019 12:30:00 +0000</pubDate>
       
       <guid>https://cddesja.github.io/tags/type-i-type-ii-errors/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Source Themes</title>
-      <link>https://cddesja.github.io/tags/source-themes/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://cddesja.github.io/tags/source-themes/</guid>
       <description></description>
     </item>
     
