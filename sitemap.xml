@@ -469,6 +469,11 @@
   </url>
   
   <url>
+    <loc>https://cddesja.github.io/classes/stat-consulting/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cddesja.github.io/categories/</loc>
     <priority>0</priority>
   </url>
