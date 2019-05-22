@@ -27,6 +27,18 @@
   </url>
   
   <url>
+    <loc>https://cddesja.github.io/tags/dissonance/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/eating-disorders/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cddesja.github.io/authors/eric-stice/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -39,12 +51,30 @@
   </url>
   
   <url>
+    <loc>https://cddesja.github.io/tags/moderators/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cddesja.github.io/publication/stice_2019/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://cddesja.github.io/tags/obesity/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cddesja.github.io/authors/paul-rohde/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/prevention/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -58,12 +88,6 @@
   <url>
     <loc>https://cddesja.github.io/publication/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cddesja.github.io/tags/source-themes/</loc>
-    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -97,6 +121,12 @@
   
   <url>
     <loc>https://cddesja.github.io/authors/nicole-b.-perry/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cddesja.github.io/tags/source-themes/</loc>
     <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
