@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on C. D. Desjardins</title>
-    <link>https://cddesja.github.io/tags/r/</link>
-    <description>Recent content in R on C. D. Desjardins</description>
+    <title>machine learning on C. D. Desjardins</title>
+    <link>https://cddesja.github.io/tags/machine-learning/</link>
+    <description>Recent content in machine learning on C. D. Desjardins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Apr 2019 08:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://cddesja.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cddesja.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

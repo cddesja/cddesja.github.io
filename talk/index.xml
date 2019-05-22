@@ -20,5 +20,14 @@
       <description>A talk on statistical power, errors, and effect sizes.</description>
     </item>
     
+    <item>
+      <title>Exploring, Visualizing, and Modeling Big Data with R</title>
+      <link>https://cddesja.github.io/talk/big_data/</link>
+      <pubDate>Fri, 05 Apr 2019 08:00:00 +0000</pubDate>
+      
+      <guid>https://cddesja.github.io/talk/big_data/</guid>
+      <description>A workshop on big data with an application to education.</description>
+    </item>
+    
   </channel>
 </rss>

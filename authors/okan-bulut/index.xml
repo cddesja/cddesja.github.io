@@ -6,10 +6,19 @@
     <description>Recent content in Okan Bulut on C. D. Desjardins</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Apr 2019 08:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://cddesja.github.io/authors/okan-bulut/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Exploring, Visualizing, and Modeling Big Data with R</title>
+      <link>https://cddesja.github.io/talk/big_data/</link>
+      <pubDate>Fri, 05 Apr 2019 08:00:00 +0000</pubDate>
+      
+      <guid>https://cddesja.github.io/talk/big_data/</guid>
+      <description>A workshop on big data with an application to education.</description>
+    </item>
     
     <item>
       <title>The Handbook of Educational Measurement and Psychometrics Using R</title>
