@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Game 24 Test</title>
+</head>
+<body>
+    <h1>Testing Game 24 Solver</h1>
+    <div id="results"></div>
+
+    <script type="module">
+        import init, { solve_game24 } from './pkg/game24_wasm.js';
+        
+        async function runTests() {
+            await init();
+            
+            const results = document.getElementById('results');
+            
+            // Test cases
+            const tests = [
+                { input: [1, 1, 8, 8], expected: true, description: "1, 1, 8, 8" },
+                { input: [4, 1, 8, 7], expected: true, description: "4, 1, 8, 7" },
+                { input: [1, 2, 3, 4], expected: true, description: "1, 2, 3, 4" },
+                { input: [1, 1, 1, 1], expected: false, description: "1, 1, 1, 1 (should fail)" },
+            ];
+            
+            results.innerHTML = '<h2>Test Results:</h2>';
+            
+            tests.forEach((test, index) => {
+                const solution = solve_game24(...test.input);
+                const hasSolution = solution !== "No solution found";
+                const passed = hasSolution === test.expected;
+                
+                results.innerHTML += `
+                    <div style="margin: 10px 0; padding: 10px; border: 1px solid ${passed ? 'green' : 'red'}; background-color: ${passed ? '#e8f5e8' : '#f5e8e8'};">
+                        <strong>Test ${index + 1}:</strong> ${test.description}<br>
+                        <strong>Solution:</strong> ${solution}<br>
+                        <strong>Status:</strong> ${passed ? 'PASSED' : 'FAILED'}
+                    </div>
+                `;
+            });
+        }
+        
+        runTests().catch(console.error);
+    </script>
+</body>
+</html>

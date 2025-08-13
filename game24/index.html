@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Game 24 Solver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .input-section {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .number-inputs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        input[type="number"] {
+            padding: 8px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            text-align: center;
+            width: 60px;
+        }
+        
+        input[type="number"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .result {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .result.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .result.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .instructions {
+            background-color: #e9f7ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            border-left: 4px solid #007bff;
+        }
+        
+        .instructions p {
+            margin: 0 0 10px 0;
+        }
+        
+        .instructions p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Game 24 Solver</h1>
+        
+        <div class="instructions">
+            <p><strong>How to play:</strong></p>
+            <p>Enter four numbers and the solver will find a way to make 24 using +, -, *, / operations.</p>
+            <p>Example: With numbers 1, 1, 8, 8, one solution is: (1 + 1 + 8) * 8 / 4 = 24</p>
+        </div>
+        
+        <div class="input-section">
+            <label>Enter four numbers:</label>
+            <div class="number-inputs">
+                <input type="number" id="num1" placeholder="Number 1" value="1">
+                <input type="number" id="num2" placeholder="Number 2" value="1">
+                <input type="number" id="num3" placeholder="Number 3" value="8">
+                <input type="number" id="num4" placeholder="Number 4" value="8">
+            </div>
+            <button onclick="solveGame24()" id="solveBtn">Solve Game 24</button>
+        </div>
+        
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+
+    <script type="module">
+        import init, { solve_game24 } from './pkg/game24_wasm.js';
+        
+        async function run() {
+            await init();
+            window.solve_game24_wasm = solve_game24;
+            document.getElementById('solveBtn').disabled = false;
+        }
+        
+        run().catch(console.error);
+        
+        window.solveGame24 = function() {
+            const num1 = parseFloat(document.getElementById('num1').value) || 0;
+            const num2 = parseFloat(document.getElementById('num2').value) || 0;
+            const num3 = parseFloat(document.getElementById('num3').value) || 0;
+            const num4 = parseFloat(document.getElementById('num4').value) || 0;
+            
+            const result = document.getElementById('result');
+            
+            try {
+                const solution = window.solve_game24_wasm(num1, num2, num3, num4);
+                
+                result.style.display = 'block';
+                if (solution === "No solution found") {
+                    result.className = 'result error';
+                    result.innerHTML = `<strong>No solution found</strong><br>Try different numbers!`;
+                } else {
+                    result.className = 'result success';
+                    result.innerHTML = `<strong>Solution found!</strong><br><code>${solution} = 24</code>`;
+                }
+            } catch (error) {
+                result.style.display = 'block';
+                result.className = 'result error';
+                result.innerHTML = `<strong>Error:</strong> ${error.message}`;
+            }
+        }
+        
+        // Allow pressing Enter to solve
+        document.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                solveGame24();
+            }
+        });
+    </script>
+</body>
+</html>

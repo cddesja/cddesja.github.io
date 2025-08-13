@@ -1,0 +1,1 @@
+/Users/mammahuckleberry/Documents/chris_claude/webassembly_toy/game24-wasm/target/wasm32-unknown-unknown/release/game24_wasm.wasm: /Users/mammahuckleberry/Documents/chris_claude/webassembly_toy/game24-wasm/src/lib.rs
