@@ -144,16 +144,23 @@
         <div id="result" class="result" style="display: none;"></div>
     </div>
 
-    <script type="module">
-        import init, { solve_game24 } from './pkg/game24_wasm.js';
-        
+    <script src="./pkg/game24_wasm_bundled.js"></script>
+    <script>
         async function run() {
-            await init();
-            window.solve_game24_wasm = solve_game24;
-            document.getElementById('solveBtn').disabled = false;
+            try {
+                await wasm_bindgen('./pkg/game24_wasm_bg.wasm');
+                window.solve_game24_wasm = wasm_bindgen.solve_game24;
+                document.getElementById('solveBtn').disabled = false;
+            } catch (error) {
+                console.error('Failed to load WASM module:', error);
+                const result = document.getElementById('result');
+                result.style.display = 'block';
+                result.className = 'result error';
+                result.innerHTML = '<strong>Error:</strong> Failed to load the game solver. Please refresh the page.';
+            }
         }
         
-        run().catch(console.error);
+        run();
         
         window.solveGame24 = function() {
             const num1 = parseFloat(document.getElementById('num1').value) || 0;
