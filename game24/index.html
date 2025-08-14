@@ -149,7 +149,7 @@
         async function run() {
             try {
                 await wasm_bindgen('./pkg/game24_wasm_bg.wasm');
-                window.solve_game24_wasm = wasm_bindgen.solve_game24;
+                window.solve_game24_wasm = window.wasm_bindgen.solve_game24;
                 document.getElementById('solveBtn').disabled = false;
             } catch (error) {
                 console.error('Failed to load WASM module:', error);
