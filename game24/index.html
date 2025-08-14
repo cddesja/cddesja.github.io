@@ -138,7 +138,7 @@
                 <input type="number" id="num3" placeholder="Number 3" value="8">
                 <input type="number" id="num4" placeholder="Number 4" value="8">
             </div>
-            <button onclick="solveGame24()" id="solveBtn">Solve Game 24</button>
+            <button onclick="solveGame24()" id="solveBtn" disabled>Solve Game 24</button>
         </div>
         
         <div id="result" class="result" style="display: none;"></div>
@@ -148,11 +148,15 @@
     <script>
         async function run() {
             try {
+                // Initialize the WASM module with explicit path
                 await wasm_bindgen('./pkg/game24_wasm_bg.wasm');
+                // The solve_game24 function is now available on wasm_bindgen after initialization
                 window.solve_game24_wasm = window.wasm_bindgen.solve_game24;
                 document.getElementById('solveBtn').disabled = false;
+                console.log('WASM module loaded successfully');
             } catch (error) {
                 console.error('Failed to load WASM module:', error);
+                console.error('Error details:', error.stack);
                 const result = document.getElementById('result');
                 result.style.display = 'block';
                 result.className = 'result error';
@@ -160,7 +164,11 @@
             }
         }
         
-        run();
+        // Ensure the button starts disabled
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('solveBtn').disabled = true;
+            run();
+        });
         
         window.solveGame24 = function() {
             const num1 = parseFloat(document.getElementById('num1').value) || 0;
