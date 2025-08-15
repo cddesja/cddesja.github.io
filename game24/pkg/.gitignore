@@ -1,0 +1,8 @@
+# Allow essential WASM files for GitHub Pages
+!game24_wasm_bg.wasm
+!game24_wasm.js
+!game24_wasm.d.ts
+!package.json
+
+# Ignore everything else
+*
