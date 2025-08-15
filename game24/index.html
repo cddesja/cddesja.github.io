@@ -144,16 +144,25 @@
         <div id="result" class="result" style="display: none;"></div>
     </div>
 
-    <script type="module">
-        import init, { solve_game24 } from './pkg/game24_wasm.js';
-        
+    <script src="./pkg/game24_wasm_bundled.js"></script>
+    <script>
         async function run() {
+            console.log('Starting WASM initialization...');
             try {
-                // Initialize the WASM module
-                await init();
-                // Store the solve_game24 function globally
-                window.solve_game24_wasm = solve_game24;
-                document.getElementById('solveBtn').disabled = false;
+                console.log('Calling wasm_bindgen...');
+                // Initialize the WASM module with explicit path
+                await wasm_bindgen('./pkg/game24_wasm_bg.wasm');
+                console.log('wasm_bindgen completed');
+                
+                // The solve_game24 function should now be available
+                console.log('wasm_bindgen.solve_game24 type:', typeof wasm_bindgen.solve_game24);
+                window.solve_game24_wasm = wasm_bindgen.solve_game24;
+                console.log('solve_game24_wasm assigned:', typeof window.solve_game24_wasm);
+                
+                // Enable the button
+                const btn = document.getElementById('solveBtn');
+                btn.disabled = false;
+                console.log('Button enabled');
                 console.log('WASM module loaded successfully');
             } catch (error) {
                 console.error('Failed to load WASM module:', error);
@@ -161,12 +170,13 @@
                 const result = document.getElementById('result');
                 result.style.display = 'block';
                 result.className = 'result error';
-                result.innerHTML = '<strong>Error:</strong> Failed to load the game solver. Please refresh the page.';
+                result.innerHTML = '<strong>Error:</strong> Failed to load the game solver. Error: ' + error.message;
             }
         }
         
         // Ensure the button starts disabled and run initialization
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
             document.getElementById('solveBtn').disabled = true;
             run();
         });
