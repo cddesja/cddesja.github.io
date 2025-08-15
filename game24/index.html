@@ -144,14 +144,15 @@
         <div id="result" class="result" style="display: none;"></div>
     </div>
 
-    <script src="./pkg/game24_wasm_bundled.js"></script>
-    <script>
+    <script type="module">
+        import init, { solve_game24 } from './pkg/game24_wasm.js';
+        
         async function run() {
             try {
-                // Initialize the WASM module with explicit path
-                await wasm_bindgen('./pkg/game24_wasm_bg.wasm');
-                // The solve_game24 function is now available on wasm_bindgen after initialization
-                window.solve_game24_wasm = window.wasm_bindgen.solve_game24;
+                // Initialize the WASM module
+                await init();
+                // Store the solve_game24 function globally
+                window.solve_game24_wasm = solve_game24;
                 document.getElementById('solveBtn').disabled = false;
                 console.log('WASM module loaded successfully');
             } catch (error) {
@@ -164,7 +165,7 @@
             }
         }
         
-        // Ensure the button starts disabled
+        // Ensure the button starts disabled and run initialization
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('solveBtn').disabled = true;
             run();
