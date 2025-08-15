@@ -118,16 +118,6 @@
         .instructions p:last-child {
             margin-bottom: 0;
         }
-
-        .status {
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            font-family: monospace;
-            font-size: 14px;
-        }
     </style>
 </head>
 <body>
@@ -139,8 +129,6 @@
             <p>Enter four numbers and the solver will find a way to make 24 using +, -, *, / operations.</p>
             <p>Example: With numbers 1, 1, 8, 8, one solution is: (1 + 1 + 8) * 8 / 4 = 24</p>
         </div>
-
-        <div id="status" class="status">Initializing solver...</div>
         
         <div class="input-section">
             <label>Enter four numbers:</label>
@@ -156,49 +144,44 @@
         <div id="result" class="result" style="display: none;"></div>
     </div>
 
-    <script src="./pkg/game24_simple.js"></script>
+    <script src="./pkg/game24_wasm_bundled.js"></script>
     <script>
-        function updateStatus(message, isError = false) {
-            const status = document.getElementById('status');
-            status.textContent = message;
-            status.style.backgroundColor = isError ? '#f8d7da' : '#f8f9fa';
-            status.style.color = isError ? '#721c24' : '#333';
-            console.log(message);
-        }
-
-        async function initializeSolver() {
-            updateStatus('Loading WASM module...');
-            
+        async function run() {
+            console.log('Starting WASM initialization...');
             try {
-                // Check if Game24 object exists
-                if (typeof window.Game24 === 'undefined') {
-                    throw new Error('Game24 object not found');
-                }
+                console.log('Calling wasm_bindgen...');
+                // Initialize the WASM module with explicit path
+                await wasm_bindgen('./pkg/game24_wasm_bg.wasm');
+                console.log('wasm_bindgen completed');
                 
-                updateStatus('Initializing solver...');
-                await window.Game24.initialize('./pkg/game24_wasm_bg.wasm');
-                
-                // Test the solver
-                updateStatus('Testing solver...');
-                const testResult = window.Game24.solve(1, 1, 8, 8);
-                console.log('Test result:', testResult);
+                // The solve_game24 function should now be available
+                console.log('wasm_bindgen.solve_game24 type:', typeof wasm_bindgen.solve_game24);
+                window.solve_game24_wasm = wasm_bindgen.solve_game24;
+                console.log('solve_game24_wasm assigned:', typeof window.solve_game24_wasm);
                 
                 // Enable the button
-                document.getElementById('solveBtn').disabled = false;
-                updateStatus('Solver ready! ✅');
-                
+                const btn = document.getElementById('solveBtn');
+                btn.disabled = false;
+                console.log('Button enabled');
+                console.log('WASM module loaded successfully');
             } catch (error) {
-                console.error('Failed to initialize solver:', error);
-                updateStatus('Error: ' + error.message, true);
-                
+                console.error('Failed to load WASM module:', error);
+                console.error('Error details:', error.stack);
                 const result = document.getElementById('result');
                 result.style.display = 'block';
                 result.className = 'result error';
-                result.innerHTML = '<strong>Error:</strong> Failed to load the game solver. ' + error.message;
+                result.innerHTML = '<strong>Error:</strong> Failed to load the game solver. Error: ' + error.message;
             }
         }
         
-        function solveGame24() {
+        // Ensure the button starts disabled and run initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            document.getElementById('solveBtn').disabled = true;
+            run();
+        });
+        
+        window.solveGame24 = function() {
             const num1 = parseFloat(document.getElementById('num1').value) || 0;
             const num2 = parseFloat(document.getElementById('num2').value) || 0;
             const num3 = parseFloat(document.getElementById('num3').value) || 0;
@@ -207,7 +190,7 @@
             const result = document.getElementById('result');
             
             try {
-                const solution = window.Game24.solve(num1, num2, num3, num4);
+                const solution = window.solve_game24_wasm(num1, num2, num3, num4);
                 
                 result.style.display = 'block';
                 if (solution === "No solution found") {
@@ -230,9 +213,6 @@
                 solveGame24();
             }
         });
-
-        // Initialize when page loads
-        document.addEventListener('DOMContentLoaded', initializeSolver);
     </script>
 </body>
 </html>
