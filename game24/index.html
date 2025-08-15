@@ -260,16 +260,29 @@
                         return await WebAssembly.instantiateStreaming(module, imports);
 
                     } catch (e) {
-                        if (module.headers.get('Content-Type') != 'application/wasm') {
-                            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", e);
-
-                        } else {
-                            throw e;
-                        }
+                        console.warn("WebAssembly.instantiateStreaming failed. Falling back to fetch + instantiate. Error:", e);
                     }
                 }
 
                 const bytes = await module.arrayBuffer();
+                
+                // Validate WASM magic number
+                const magicView = new Uint8Array(bytes, 0, 4);
+                const expectedMagic = [0x00, 0x61, 0x73, 0x6d];
+                console.log('WASM file size:', bytes.byteLength);
+                console.log('WASM magic bytes:', Array.from(magicView));
+                console.log('Expected magic:', expectedMagic);
+                
+                if (bytes.byteLength < 8) {
+                    throw new Error(`WASM file too small: ${bytes.byteLength} bytes`);
+                }
+                
+                for (let i = 0; i < 4; i++) {
+                    if (magicView[i] !== expectedMagic[i]) {
+                        throw new Error(`Invalid WASM magic number at byte ${i}: got 0x${magicView[i].toString(16)}, expected 0x${expectedMagic[i].toString(16)}`);
+                    }
+                }
+                
                 return await WebAssembly.instantiate(bytes, imports);
 
             } else {
@@ -331,12 +344,21 @@
             const imports = __wbg_get_imports();
 
             if (typeof module_or_path === 'string' || (typeof Request === 'function' && module_or_path instanceof Request) || (typeof URL === 'function' && module_or_path instanceof URL)) {
-                module_or_path = fetch(module_or_path);
+                const response = await fetch(module_or_path);
+                console.log('WASM fetch response status:', response.status);
+                console.log('WASM fetch response headers:', [...response.headers.entries()]);
+                console.log('WASM fetch response URL:', response.url);
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch WASM: ${response.status} ${response.statusText}`);
+                }
+                
+                module_or_path = response;
             }
 
             __wbg_init_memory(imports);
 
-            const { instance, module } = await __wbg_load(await module_or_path, imports);
+            const { instance, module } = await __wbg_load(module_or_path, imports);
 
             return __wbg_finalize_init(instance, module);
         }
